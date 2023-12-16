@@ -137,7 +137,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnKaydetENG = new System.Windows.Forms.Button();
             this.btnAc = new System.Windows.Forms.Button();
+            this.engButton = new System.Windows.Forms.Button();
+            this.trButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -526,6 +529,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.trButton);
+            this.tabPage1.Controls.Add(this.engButton);
             this.tabPage1.Controls.Add(this.comparerbtn);
             this.tabPage1.Controls.Add(this.yardimci_textbox);
             this.tabPage1.Controls.Add(this.label21);
@@ -586,6 +591,7 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.btnKaydet);
+            this.tabPage1.Controls.Add(this.btnKaydetENG);
             this.tabPage1.Controls.Add(this.btnAc);
             this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
@@ -1371,6 +1377,18 @@
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
+            // btnKaydetENG
+            // 
+            this.btnKaydetENG.Visible = false;
+            this.btnKaydetENG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKaydetENG.Location = new System.Drawing.Point(28, 1181);
+            this.btnKaydetENG.Name = "btnKaydet";
+            this.btnKaydetENG.Size = new System.Drawing.Size(189, 79);
+            this.btnKaydetENG.TabIndex = 78;
+            this.btnKaydetENG.Text = "SAVE";
+            this.btnKaydetENG.UseVisualStyleBackColor = true;
+            this.btnKaydetENG.Click += new System.EventHandler(this.btnKaydetENG_Click);
+            // 
             // btnAc
             // 
             this.btnAc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -1395,6 +1413,30 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1326, 1397);
             this.tabControl1.TabIndex = 0;
+            // 
+            // engButton
+            // 
+            this.engButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engButton.Location = new System.Drawing.Point(1140, 30);
+            this.engButton.Name = "engButton";
+            this.engButton.Size = new System.Drawing.Size(70, 45);
+            this.engButton.TabIndex = 144;
+            this.engButton.Text = "ENG";
+            this.engButton.UseVisualStyleBackColor = true;
+            this.engButton.Click += new System.EventHandler(this.engButton_Click);
+            // 
+            // trButton
+            // 
+            this.trButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trButton.Location = new System.Drawing.Point(1212, 30);
+            this.trButton.Name = "trButton";
+            this.trButton.Size = new System.Drawing.Size(70, 45);
+            this.trButton.TabIndex = 145;
+            this.trButton.Text = "TR";
+            this.trButton.UseVisualStyleBackColor = true;
+            this.trButton.Click += new System.EventHandler(this.trButton_Click);
+            this.trButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.trButton.BackColor = System.Drawing.Color.Orange;
             // 
             // Form1
             // 
@@ -1527,6 +1569,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnKaydetENG;
         private System.Windows.Forms.Button btnAc;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -1564,6 +1607,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button comparerbtn;
+        private System.Windows.Forms.Button engButton;
+        private System.Windows.Forms.Button trButton;
     }
 }
 
