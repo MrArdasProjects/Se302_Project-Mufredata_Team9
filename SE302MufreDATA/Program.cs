@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Se302Prototype
+namespace SE302MufreDATA
 {
     internal static class Program
     {

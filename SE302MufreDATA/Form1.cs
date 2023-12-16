@@ -29,8 +29,8 @@ namespace SE302MufreDATA
             this.Width = 1400;   // Formun genişliğini 1200 piksel olarak ayarlar
             this.Height = 1200;  // Formun yüksekliğini 100*0 piksel olarak ayarlar
 
-            Tables.DataGridSettings(dataGridView1);
-            Tables.DataGridSettings2(dataGridView2);
+            Tables.DataGridSettings(dataGridView1); 
+            Tables.DataGridSettings2(dataGridView2); 
             Tables.DataGridSettings3(dataGridView3);
 
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit; // DataGridView1_CellEndEdit metodu
@@ -56,11 +56,11 @@ namespace SE302MufreDATA
 
             MufreDAT list = new MufreDAT();
             list.SecilenDegerler = new List<string>();
-
+            
             List<List<string>> tabloVerileri = new List<List<string>>();
-
+            
             List<List<string>> tabloVerileri2 = new List<List<string>>();
-
+            
             List<List<string>> tabloVerileri3 = new List<List<string>>();
 
 
@@ -212,7 +212,7 @@ namespace SE302MufreDATA
                 string dersin_amaci = dersinamaci_textbox.Text;
                 string ogrenme_cikti = ogrenmecikti_textbox.Text;
                 string ders_tanimi = derstanimi_textbox.Text;
-
+             
 
 
 
@@ -253,10 +253,10 @@ namespace SE302MufreDATA
                         ogrtmeleman = ogrtmeleman,
                         yardimci = yardimci,
                         dersin_amaci = dersin_amaci,
-                        ogrenme_cikti = ogrenme_cikti,
+                        ogrenme_cikti = ogrenme_cikti,  
                         ders_tanimi = ders_tanimi,
 
-
+                    
 
 
 
@@ -283,8 +283,8 @@ namespace SE302MufreDATA
 
                         temelders = radioButton1.Checked,
                         uzmanlikalanders = radioButton2.Checked,
-                        destekders = radioButton3.Checked,
-                        iletisimders = radioButton4.Checked,
+                        destekders = radioButton3.Checked,  
+                        iletisimders = radioButton4.Checked,    
                         beceriders = radioButton5.Checked,
 
                     };
@@ -344,7 +344,7 @@ namespace SE302MufreDATA
                     {
                         dataGridView2.Rows.Add(satir.ToArray());
                     }
-
+                    
                     dataGridView3.Rows.Clear();
 
                     foreach (List<string> satir in kisi.Veriler3)
@@ -356,7 +356,7 @@ namespace SE302MufreDATA
 
 
                     duzenleyen_kisi_textbox.Text = kisi.duzenleyen_kisi;
-
+                   
 
                     dersinadi_textbox.Text = kisi.dersin_adi;
 
@@ -371,7 +371,7 @@ namespace SE302MufreDATA
                     kosul_textbox.Text = kisi.on_kosullar;
 
                     teknik_textbox.Text = kisi.yontem_teknik;
-
+                    
                     koordinator_textbox.Text = kisi.koordinator;
                     ogrtmeleman_textbox.Text = kisi.ogrtmeleman;
                     yardimci_textbox.Text = kisi.yardimci;
@@ -404,7 +404,7 @@ namespace SE302MufreDATA
                     radioButton3.Checked = kisi.destekders;
                     radioButton4.Checked = kisi.iletisimders;
                     radioButton5.Checked = kisi.beceriders;
-
+                  
                 }
             }
             catch (Exception ex)
@@ -417,13 +417,13 @@ namespace SE302MufreDATA
 
         private void comparerbtn_Click(object sender, EventArgs e)
         {
-
+          
         }
 
-
+        
     }
 
-
-}
+        
+   }
 
 

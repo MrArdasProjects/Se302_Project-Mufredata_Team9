@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Se302Prototype.Properties
+namespace SE302MufreDATA.Properties
 {
 
 

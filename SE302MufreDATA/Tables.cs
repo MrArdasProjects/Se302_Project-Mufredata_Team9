@@ -48,8 +48,8 @@ namespace SE302MufreDATA
         } // AKTS İş Yükü Tablosu
         public static void DataGridSettings2(DataGridView datagridview2) // Haftalık Konular Tablosu
         {
-            datagridview2.RowCount = 16;
-            datagridview2.ColumnCount = 3;
+            datagridview2.RowCount = 16; 
+            datagridview2.ColumnCount = 3; 
 
             datagridview2.Dock = DockStyle.Fill;
             datagridview2.AllowUserToResizeColumns = true;
