@@ -32,6 +32,7 @@ namespace SE302MufreDATA
             Tables.DataGridSettings(dataGridView1); 
             Tables.DataGridSettings2(dataGridView2); 
             Tables.DataGridSettings3(dataGridView3);
+            Tables.DataGridSettings4(dataGridView4);
 
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit; // DataGridView1_CellEndEdit metodu
             dataGridView3.CellEndEdit += DataGridView3_CellEndEdit; // DataGridView3_CellEndEdit metodu
@@ -63,6 +64,8 @@ namespace SE302MufreDATA
             
             List<List<string>> tabloVerileri3 = new List<List<string>>();
 
+            List<List<string>> tabloVerileri4 = new List<List<string>>();
+
 
             // Tablo verilerini al
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -104,6 +107,21 @@ namespace SE302MufreDATA
                         satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
                     }
                     tabloVerileri3.Add(satir);
+                }
+            }
+
+
+            for (int i = 0; i < dataGridView4.Rows.Count; i++)
+            {
+                DataGridViewRow row = dataGridView4.Rows[i];
+                if (!row.IsNewRow)
+                {
+                    List<string> satir = new List<string>();
+                    for (int j = 0; j < dataGridView4.Columns.Count; j++)
+                    {
+                        satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
+                    }
+                    tabloVerileri4.Add(satir);
                 }
             }
 
@@ -195,7 +213,7 @@ namespace SE302MufreDATA
                 }
 
 
-                string duzenleyen_kisi = duzenleyen_kisi_textbox.Text;
+                string duzenleyenKisi_editorName= duzenleyen_kisi_textbox.Text;
                 string dersin_adi = dersinadi_textbox.Text;
                 string dersin_kodu = kod_textbox.Text;
                 string guz = guz_textbox.Text;
@@ -212,6 +230,11 @@ namespace SE302MufreDATA
                 string dersin_amaci = dersinamaci_textbox.Text;
                 string ogrenme_cikti = ogrenmecikti_textbox.Text;
                 string ders_tanimi = derstanimi_textbox.Text;
+                string ders_kitabi = derskitabi_textbox.Text;
+                string materyal = materyal_textbox.Text;
+                string kisise_notlar = kisisel_notlar_textbox.Text;
+             
+                
              
 
 
@@ -224,7 +247,7 @@ namespace SE302MufreDATA
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "JSON Files|*.json|All Files|*.*";
                 saveFileDialog.Title = "JSON Dosyası Kaydet";
-                saveFileDialog.FileName = $"syllabus {dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyen_kisi}_TR.json";
+                saveFileDialog.FileName = $"syllabus {dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyenKisi_editorName}_TR.json";
 
                 // Kullanıcıdan dosya yolu seçmesini iste
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -236,7 +259,7 @@ namespace SE302MufreDATA
                     MufreDAT kisi = new MufreDAT
                     {
 
-                        duzenleyen_kisi = duzenleyen_kisi,
+                        duzenleyenKisi_editorName = duzenleyenKisi_editorName,
 
 
                         dersin_adi = dersin_adi,
@@ -255,7 +278,11 @@ namespace SE302MufreDATA
                         dersin_amaci = dersin_amaci,
                         ogrenme_cikti = ogrenme_cikti,  
                         ders_tanimi = ders_tanimi,
-
+                        ders_kitabi = ders_kitabi,
+                        materyal = materyal,
+                        kisisel_notlar = kisise_notlar,
+                       
+                      
                     
 
 
@@ -263,6 +290,7 @@ namespace SE302MufreDATA
                         Veriler = tabloVerileri,
                         Veriler2 = tabloVerileri2,
                         Veriler3 = tabloVerileri3,
+                        Veriler4 = tabloVerileri4,
 
 
 
@@ -305,7 +333,7 @@ namespace SE302MufreDATA
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
-        } // JSON Kaydetme TR
+        } // JSON Kaydetme 
         private void btnKaydetENG_Click(object sender, EventArgs e)
         {
 
@@ -318,22 +346,10 @@ namespace SE302MufreDATA
             
             List<List<string>> tabloVerileri3 = new List<List<string>>();
 
+            List<List<string>> tabloVerileri4 = new List<List<string>>();
+
 
             // Tablo verilerini al
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                DataGridViewRow row = dataGridView1.Rows[i];
-                if (!row.IsNewRow)
-                {
-                    List<string> satir = new List<string>();
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                    {
-                        satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
-                    }
-                    tabloVerileri.Add(satir);
-                }
-            }
-
             for (int i = 0; i < dataGridView2.Rows.Count; i++)
             {
                 DataGridViewRow row = dataGridView2.Rows[i];
@@ -348,6 +364,20 @@ namespace SE302MufreDATA
                 }
             }
 
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                DataGridViewRow row = dataGridView1.Rows[i];
+                if (!row.IsNewRow)
+                {
+                    List<string> satir = new List<string>();
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
+                    }
+                    tabloVerileri.Add(satir);
+                }
+            }
+
             for (int i = 0; i < dataGridView3.Rows.Count; i++)
             {
                 DataGridViewRow row = dataGridView3.Rows[i];
@@ -359,6 +389,21 @@ namespace SE302MufreDATA
                         satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
                     }
                     tabloVerileri3.Add(satir);
+                }
+            }
+
+
+            for (int i = 0; i < dataGridView4.Rows.Count; i++)
+            {
+                DataGridViewRow row = dataGridView4.Rows[i];
+                if (!row.IsNewRow)
+                {
+                    List<string> satir = new List<string>();
+                    for (int j = 0; j < dataGridView4.Columns.Count; j++)
+                    {
+                        satir.Add(row.Cells[j].Value != null ? row.Cells[j].Value.ToString() : "");
+                    }
+                    tabloVerileri4.Add(satir);
                 }
             }
 
@@ -450,7 +495,7 @@ namespace SE302MufreDATA
                 }
 
 
-                string duzenleyen_kisi = duzenleyen_kisi_textbox.Text;
+                string duzenleyenKisi_editorName = duzenleyen_kisi_textbox.Text;
                 string dersin_adi = dersinadi_textbox.Text;
                 string dersin_kodu = kod_textbox.Text;
                 string guz = guz_textbox.Text;
@@ -467,6 +512,11 @@ namespace SE302MufreDATA
                 string dersin_amaci = dersinamaci_textbox.Text;
                 string ogrenme_cikti = ogrenmecikti_textbox.Text;
                 string ders_tanimi = derstanimi_textbox.Text;
+                string ders_kitabi = derskitabi_textbox.Text;
+                string materyal = materyal_textbox.Text;
+                string kisise_notlar = kisisel_notlar_textbox.Text;
+             
+                
              
 
 
@@ -478,8 +528,8 @@ namespace SE302MufreDATA
                 // SaveFileDialog oluştur
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "JSON Files|*.json|All Files|*.*";
-                saveFileDialog.Title = "JSON Dosyası Kaydet";
-                saveFileDialog.FileName = $"syllabus {dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyen_kisi}_ENG.json";
+                saveFileDialog.Title = "Save JSON File";
+                saveFileDialog.FileName = $"syllabus {dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyenKisi_editorName}_ENG.json";
 
                 // Kullanıcıdan dosya yolu seçmesini iste
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -491,7 +541,7 @@ namespace SE302MufreDATA
                     MufreDAT kisi = new MufreDAT
                     {
 
-                        duzenleyen_kisi = duzenleyen_kisi,
+                        duzenleyenKisi_editorName = duzenleyenKisi_editorName,
 
 
                         dersin_adi = dersin_adi,
@@ -510,14 +560,18 @@ namespace SE302MufreDATA
                         dersin_amaci = dersin_amaci,
                         ogrenme_cikti = ogrenme_cikti,  
                         ders_tanimi = ders_tanimi,
-
+                        ders_kitabi = ders_kitabi,
+                        materyal = materyal,
+                        kisisel_notlar = kisise_notlar,
+                       
+                      
                     
-
 
 
                         Veriler = tabloVerileri,
                         Veriler2 = tabloVerileri2,
                         Veriler3 = tabloVerileri3,
+                        Veriler4 = tabloVerileri4,
 
 
 
@@ -552,13 +606,13 @@ namespace SE302MufreDATA
                     // JSON'u dosyaya kaydet
                     System.IO.File.WriteAllText(dosyaYolu, json);
 
-                    MessageBox.Show("JSON dosyası kaydedildi.");
+                    MessageBox.Show("JSON File Save Succesful");
                 }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Hata oluştu: " + ex.Message);
+                MessageBox.Show("Error Occured: " + ex.Message);
             }
         } // JSON Kaydetme ENG
 
@@ -607,10 +661,17 @@ namespace SE302MufreDATA
                         dataGridView3.Rows.Add(satir.ToArray());
                     }
 
+                    dataGridView4.Rows.Clear();
+
+                    foreach (List<string> satir in kisi.Veriler4)
+                    {
+                        dataGridView4.Rows.Add(satir.ToArray());
+                    }
 
 
 
-                    duzenleyen_kisi_textbox.Text = kisi.duzenleyen_kisi;
+
+                    duzenleyen_kisi_textbox.Text = kisi.duzenleyenKisi_editorName;
                    
 
                     dersinadi_textbox.Text = kisi.dersin_adi;
@@ -634,6 +695,11 @@ namespace SE302MufreDATA
                     dersinamaci_textbox.Text = kisi.dersin_amaci;
                     ogrenmecikti_textbox.Text = kisi.ogrenme_cikti;
                     derstanimi_textbox.Text = kisi.ders_tanimi;
+                    derskitabi_textbox.Text = kisi.ders_kitabi;
+                    materyal_textbox.Text = kisi.materyal;
+                    kisisel_notlar_textbox.Text = kisi.kisisel_notlar;
+
+                   
 
 
                     turkce_radiobutton.Checked = kisi.turkce;
@@ -728,8 +794,19 @@ namespace SE302MufreDATA
             radioButton3.Text = "Supportive Course";
             radioButton4.Text = "Communication and Management Skills Course\t";
             radioButton5.Text = "Transferable Skill Course";
+            Hafta.HeaderText = "Week";
+            Konular.HeaderText = "Subjects";
+            On_hazirlik.HeaderText = "Required Materials";
+            yariyilaktivite.HeaderText = "Semester Activities";
+            Sayı.HeaderText = "Number";
+            katkipayi.HeaderText = "Weighting";
+            activite.HeaderText = "Semester Activities\t";
+            sayi.HeaderText = "Number";
+            sure.HeaderText = "Duration(Hour)\t";
+            is_yuku.HeaderText = "Workload";
+            label1.Text = "One Who Edited ";
+            label4.Text = "Date :";
         }
-
         private void trButton_Click(object sender, EventArgs e)
         {
             engButton.FlatStyle = FlatStyle.Standard;
@@ -783,8 +860,20 @@ namespace SE302MufreDATA
             radioButton3.Text = "Destek Dersleri";
             radioButton4.Text = "İletişim ve Yönetim Becerileri Dersleri\t";
             radioButton5.Text = "Aktarılabilir Beceri Dersleri";
+            Hafta.HeaderText = "Hafta";
+            Konular.HeaderText = "Konular";
+            On_hazirlik.HeaderText = "Ön Hazırlık";
+            yariyilaktivite.HeaderText = "Yarıyıl Aktiviteleri";
+            Sayı.HeaderText = "Sayı";
+            katkipayi.HeaderText = "Katkı Payı %";
+            activite.HeaderText = "Yarıyıl Aktiviteleri\t";
+            sayi.HeaderText = "Sayı";
+            sure.HeaderText = "Süre (Saat)\t";
+            is_yuku.HeaderText = "İş Yükü";
+            label1.Text = "Düzenleyen Kişi ";
+            label4.Text = "Tarih :";
         }
-
+     
     }
 
         

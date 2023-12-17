@@ -46,6 +46,7 @@ namespace SE302MufreDATA
                 datagridview3.Rows[13].Cells[0].Value = "Toplam";
             }
         } // AKTS İş Yükü Tablosu
+
         public static void DataGridSettings2(DataGridView datagridview2) // Haftalık Konular Tablosu
         {
             datagridview2.RowCount = 16; 
@@ -91,7 +92,7 @@ namespace SE302MufreDATA
         public static void DataGridSettings(DataGridView datagridview) // Değerlendirme Ölçütleri Tablosu
         {
             datagridview.RowCount = 13; // 13 satır
-            datagridview.ColumnCount = 3; // 3 sütun
+            datagridview.ColumnCount = 7; // 7 sütun
 
             datagridview.Dock = DockStyle.Fill;
             datagridview.AllowUserToResizeColumns = true;
@@ -122,6 +123,42 @@ namespace SE302MufreDATA
                 datagridview.Rows[12].Cells[0].Value = "Toplam";
             }
         }
+
+        public static void DataGridSettings4(DataGridView datagridview4) // Program Çıktıları
+        {
+            datagridview4.RowCount = 13; // 13 satır
+            datagridview4.ColumnCount = 7; // 7 sütun
+
+            datagridview4.Dock = DockStyle.Fill;
+            datagridview4.AllowUserToResizeColumns = true;
+            datagridview4.AllowUserToResizeRows = true;
+            datagridview4.RowsDefaultCellStyle.BackColor = Color.LightCyan;
+            datagridview4.RowsDefaultCellStyle.ForeColor = Color.Black;
+            datagridview4.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
+
+            datagridview4.Columns[0].DefaultCellStyle.BackColor = Color.LightBlue;
+            datagridview4.Columns[1].DefaultCellStyle.BackColor = Color.LightGreen;
+            datagridview4.Columns[2].DefaultCellStyle.BackColor = Color.LightPink;
+            datagridview4.RowHeadersVisible = false;
+
+            for (int i = 0; i < datagridview4.Rows.Count; i++)
+            {
+                datagridview4.Rows[0].Cells[0].Value = "1";
+                datagridview4.Rows[1].Cells[0].Value = "2";
+                datagridview4.Rows[2].Cells[0].Value = "3";
+                datagridview4.Rows[3].Cells[0].Value = "4";
+                datagridview4.Rows[4].Cells[0].Value = "5";
+                datagridview4.Rows[5].Cells[0].Value = "6";
+                datagridview4.Rows[6].Cells[0].Value = "7";
+                datagridview4.Rows[7].Cells[0].Value = "8";
+                datagridview4.Rows[8].Cells[0].Value = "9";
+                datagridview4.Rows[9].Cells[0].Value = "10";
+                datagridview4.Rows[10].Cells[0].Value = "11";
+                datagridview4.Rows[11].Cells[0].Value = "12";
+                datagridview4.Rows[12].Cells[0].Value = "13";
+                
+            }
+        } 
 
         public static void DataGridView1_CellEndEdit(DataGridView dataGridView) // Toplamın 100 Den Büyük Olma Durumu
         {

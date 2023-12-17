@@ -8,14 +8,7 @@ namespace SE302MufreDATA
 {
     public class MufreDAT
     {
-        public List<List<string>> Veriler { get; set; } // Tablo1 Listesi
-
-        public List<List<string>> Veriler2 { get; set; } // Tablo2 Listesi
-
-        public List<List<string>> Veriler3 { get; set; } // Tablo3 Listesi
-
-
-        public string duzenleyen_kisi { get; set; }
+        public string duzenleyenKisi_editorName { get; set; }
 
         public List<string> SecilenDegerler { get; set; } // RadioButton Listeleri
         public bool ingilizce { get; set; }
@@ -47,6 +40,12 @@ namespace SE302MufreDATA
         public string on_kosullar { get; set; }
         public string yontem_teknik { get; set; }
 
+        public string ders_kitabi { get; set; }
+
+        public string materyal { get; set; }
+
+        public string kisisel_notlar { get; set; }
+
         public string koordinator { get; set; }
         public string ogrtmeleman { get; set; }
         public string yardimci { get; set; }
@@ -69,7 +68,13 @@ namespace SE302MufreDATA
         public bool beceriders { get; set; }
 
 
+        public List<List<string>> Veriler { get; set; } // Tablo1 Listesi
 
+        public List<List<string>> Veriler2 { get; set; } // Tablo2 Listesi
+
+        public List<List<string>> Veriler3 { get; set; } // Tablo3 Listesi
+
+        public List<List<string>> Veriler4 { get; set; } // Tablo4 Listesi
 
 
     }
