@@ -10,71 +10,64 @@ namespace SE302MufreDATA
     {
         public string duzenleyenKisi_editorName { get; set; }
 
-        public List<string> SecilenDegerler { get; set; } // RadioButton Listeleri
-        public bool ingilizce { get; set; }
-        public bool turkce { get; set; }
-        public bool ikinci_yabanci_dil { get; set; }
+        public string dersinAdi_CourseName { get; set; }
+        public string dersinHocasi_Lecturer { get; set; }
+        public string dersinKodu_Code { get; set; }
+        public string guz_Fall { get; set; }
+        public string bahar_Spring { get; set; }
+        public string teori_Theory { get; set; }
+        public string uygulamaLab_ApplicationLab { get; set; }
+        public string yerelKredi_LocalCredits { get; set; }
+        public string akts_ects { get; set; }
+        public string onKosullar_Prerequisities { get; set; }
 
-        public bool zorunlu { get; set; }
-        public bool secmeli { get; set; }
+        public List<string> SecilenDegerler_ChosenValues { get; set; } // RadioButton Listeleri
+        public bool ingilizce_English { get; set; }
+        public bool turkce_Turkish { get; set; }
+        public bool ikinciYabanciDil_SecondForeignLang { get; set; }
 
-        public bool on_lisans { get; set; }
-        public bool lisans { get; set; }
+        public bool zorunlu_Required { get; set; }
+        public bool secmeli_Elective { get; set; }
 
-        public bool yuksek_lisans { get; set; }
-        public bool doktora { get; set; }
+        public bool onLisans_ShortCycle { get; set; }
+        public bool lisans_FirstCycle { get; set; }
+        public bool yuksekLisans_SecondCycle { get; set; }
+        public bool doktora_ThirdCycle { get; set; }
 
-        public bool yuz_yuze { get; set; }
-        public bool cevrim_ici { get; set; }
-        public bool karma { get; set; }
+        public bool yuzYuze_FaceToFace { get; set; }
+        public bool cevrimIci_Online { get; set; }
+        public bool karma_Blended { get; set; }
 
-        public string dersin_adi { get; set; }
-        public string dersin_hocasi { get; set; }
-        public string dersin_kodu { get; set; }
-        public string guz { get; set; }
-        public string bahar { get; set; }
-        public string teori { get; set; }
-        public string uygulama_lab { get; set; }
-        public string yerel_kredi { get; set; }
-        public string akts { get; set; }
-        public string on_kosullar { get; set; }
-        public string yontem_teknik { get; set; }
+        public string yontemTeknik_MethodsTechniques { get; set; }
 
-        public string ders_kitabi { get; set; }
+        public string koordinator_Coordinator { get; set; }
+        public string ogrtmeleman_Lecturer { get; set; }
+        public string yardimci_Assistant { get; set; }
 
-        public string materyal { get; set; }
+        public string dersKitabi_CourseBook { get; set; }
 
-        public string kisisel_notlar { get; set; }
+        public string materyal_Material { get; set; }
 
-        public string koordinator { get; set; }
-        public string ogrtmeleman { get; set; }
-        public string yardimci { get; set; }
-
-
-        public string dersin_amaci { get; set; }
-
-        public string ogrenme_cikti { get; set; }
-
-        public string ders_tanimi { get; set; }
-
-        public bool temelders { get; set; }
-
-        public bool uzmanlikalanders { get; set; }
-
-        public bool destekders { get; set; }
-
-        public bool iletisimders { get; set; }
-
-        public bool beceriders { get; set; }
+        public string kisiselNotlar_PersonalNotes { get; set; }
 
 
-        public List<List<string>> Veriler { get; set; } // Tablo1 Listesi
+        public string dersinAmaci_CourseObjectives { get; set; }
+        public string ogrenmeCikti_LearningOutcomes { get; set; }
+        public string dersTanimi_CourseDescripiton { get; set; }
 
-        public List<List<string>> Veriler2 { get; set; } // Tablo2 Listesi
+        public bool temelders_Core { get; set; }
+        public bool uzmanlikalanders_MajorArea { get; set; }
+        public bool destekders_Supportive { get; set; }
+        public bool iletisimders_CommManagement { get; set; }
+        public bool beceriders_Skill { get; set; }
 
-        public List<List<string>> Veriler3 { get; set; } // Tablo3 Listesi
+        public List<List<string>> haftalıkKonular_WeeklySubjects { get; set; } // Tablo2 Listesi
 
-        public List<List<string>> Veriler4 { get; set; } // Tablo4 Listesi
+        public List<List<string>> degerlendirmeOlcutleri_Assessment { get; set; } // Tablo1 Listesi
+
+        public List<List<string>> aktsData_EctsData { get; set; } // Tablo3 Listesi
+
+        public List<List<string>> ogrenmeCıktılarıData_LearningOutcomesData { get; set; } // Tablo4 Listesi
 
 
     }

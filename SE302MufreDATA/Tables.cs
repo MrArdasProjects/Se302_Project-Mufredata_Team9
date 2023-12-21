@@ -11,6 +11,16 @@ namespace SE302MufreDATA
 {
     public class Tables
     {
+        public static void UpdateCellValue(DataGridView dataGridView, int rowIndex, int columnIndex, string newValue)
+    {
+        if (rowIndex >= 0 && rowIndex < dataGridView.Rows.Count &&
+            columnIndex >= 0 && columnIndex < dataGridView.Columns.Count)
+        {
+            dataGridView.Rows[rowIndex].Cells[columnIndex].Value = newValue;
+        }
+    }
+
+       
         public static void DataGridSettings3(DataGridView datagridview3)
         {
             datagridview3.RowCount = 14; // 14 satır
@@ -83,7 +93,7 @@ namespace SE302MufreDATA
                 datagridview2.Rows[13].Cells[0].Value = "14";
                 datagridview2.Rows[14].Cells[0].Value = "15";
                 datagridview2.Rows[15].Cells[0].Value = "16";
-                datagridview2.Rows[14].Cells[1].Value = "Dersin Gözden Geçirilmesi";
+                datagridview2.Rows[14].Cells[1].Value = "Drsin Gözden Geçirilmesi";
                 datagridview2.Rows[15].Cells[1].Value = "Final Sınavı";
 
             }
@@ -112,10 +122,10 @@ namespace SE302MufreDATA
                 datagridview.Rows[1].Cells[0].Value = "Laboratuvar / Uygulama";
                 datagridview.Rows[2].Cells[0].Value = "Arazi Çalışması";
                 datagridview.Rows[3].Cells[0].Value = "Küçük Sınav / Stüdyo Kritiği";
-                datagridview.Rows[4].Cells[0].Value = "Portfolyo";
-                datagridview.Rows[5].Cells[0].Value = "Ödev";
-                datagridview.Rows[6].Cells[0].Value = "Sunum / Jüri Önünde Sunum";
-                datagridview.Rows[7].Cells[0].Value = "Proje";
+                datagridview.Rows[4].Cells[0].Value = "Ödev";
+                datagridview.Rows[5].Cells[0].Value = "Sunum / Jüri Önünde Sunum";
+                datagridview.Rows[6].Cells[0].Value = "Proje";
+                datagridview.Rows[7].Cells[0].Value = "Portfolyo";
                 datagridview.Rows[8].Cells[0].Value = "Seminer/Çalıştay";
                 datagridview.Rows[9].Cells[0].Value = "Sözlü Sınav";
                 datagridview.Rows[10].Cells[0].Value = "Ara Sınav";

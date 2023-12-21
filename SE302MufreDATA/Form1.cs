@@ -29,9 +29,9 @@ namespace SE302MufreDATA
             this.Width = 1400;   // Formun genişliğini 1200 piksel olarak ayarlar
             this.Height = 1200;  // Formun yüksekliğini 100*0 piksel olarak ayarlar
 
-            Tables.DataGridSettings(dataGridView1); 
             Tables.DataGridSettings2(dataGridView2); 
             Tables.DataGridSettings3(dataGridView3);
+            Tables.DataGridSettings(dataGridView1);
             Tables.DataGridSettings4(dataGridView4);
 
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit; // DataGridView1_CellEndEdit metodu
@@ -56,7 +56,7 @@ namespace SE302MufreDATA
         {
 
             MufreDAT list = new MufreDAT();
-            list.SecilenDegerler = new List<string>();
+            list.SecilenDegerler_ChosenValues = new List<string>();
             
             List<List<string>> tabloVerileri = new List<List<string>>();
             
@@ -133,83 +133,83 @@ namespace SE302MufreDATA
 
                 if (ingilizce_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(ingilizce_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(ingilizce_radiobutton.Text);
                 }
 
                 if (turkce_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(turkce_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(turkce_radiobutton.Text);
                 }
 
                 if (ikinciyabancidil_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(ikinciyabancidil_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(ikinciyabancidil_radiobutton.Text);
                 }
 
                 if (zorunlu_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(zorunlu_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(zorunlu_radiobutton.Text);
                 }
 
                 if (secmeli_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(secmeli_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(secmeli_radiobutton.Text);
                 }
 
                 if (onlisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(onlisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(onlisans_radiobutton.Text);
                 }
 
                 if (lisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(lisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(lisans_radiobutton.Text);
                 }
 
                 if (yukseklisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(yukseklisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(yukseklisans_radiobutton.Text);
                 }
 
                 if (doktora_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(doktora_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(doktora_radiobutton.Text);
                 }
 
                 if (yuzyuze_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(yuzyuze_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(yuzyuze_radiobutton.Text);
                 }
 
                 if (cevrimici_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(cevrimici_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(cevrimici_radiobutton.Text);
                 }
 
                 if (karma_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(karma_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(karma_radiobutton.Text);
                 }
 
                 if (radioButton1.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton1.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton1.Text);
                 }
                 if (radioButton2.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton2.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton2.Text);
                 }
                 if (radioButton3.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton3.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton3.Text);
                 }
                 if (radioButton4.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton4.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton4.Text);
                 }
                 if (radioButton5.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton5.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton5.Text);
                 }
 
 
@@ -262,58 +262,56 @@ namespace SE302MufreDATA
                         duzenleyenKisi_editorName = duzenleyenKisi_editorName,
 
 
-                        dersin_adi = dersin_adi,
-                        dersin_kodu = dersin_kodu,
-                        guz = guz,
-                        bahar = bahar,
-                        teori = teori,
-                        uygulama_lab = uyglab,
-                        akts = akts,
-                        yerel_kredi = kredi,
-                        on_kosullar = kosul,
-                        yontem_teknik = teknik,
-                        koordinator = koordinator,
-                        ogrtmeleman = ogrtmeleman,
-                        yardimci = yardimci,
-                        dersin_amaci = dersin_amaci,
-                        ogrenme_cikti = ogrenme_cikti,  
-                        ders_tanimi = ders_tanimi,
-                        ders_kitabi = ders_kitabi,
-                        materyal = materyal,
-                        kisisel_notlar = kisise_notlar,
+                        dersinAdi_CourseName = dersin_adi,
+                        dersinKodu_Code = dersin_kodu,
+                        guz_Fall = guz,
+                        bahar_Spring = bahar,
+                        teori_Theory = teori,
+                        uygulamaLab_ApplicationLab = uyglab,
+                        akts_ects = akts,
+                        yerelKredi_LocalCredits = kredi,
+                        onKosullar_Prerequisities = kosul,
+                        yontemTeknik_MethodsTechniques = teknik,
+                        koordinator_Coordinator = koordinator,
+                        ogrtmeleman_Lecturer = ogrtmeleman,
+                        yardimci_Assistant = yardimci,
+                        dersinAmaci_CourseObjectives = dersin_amaci,
+                        ogrenmeCikti_LearningOutcomes = ogrenme_cikti,  
+                        dersTanimi_CourseDescripiton = ders_tanimi,
+                        dersKitabi_CourseBook = ders_kitabi,
+                        materyal_Material = materyal,
+                        kisiselNotlar_PersonalNotes = kisise_notlar,
                        
-                      
-                    
 
-
-
-                        Veriler = tabloVerileri,
-                        Veriler2 = tabloVerileri2,
-                        Veriler3 = tabloVerileri3,
-                        Veriler4 = tabloVerileri4,
+                        haftalıkKonular_WeeklySubjects = tabloVerileri2,
+                        degerlendirmeOlcutleri_Assessment = tabloVerileri,
+                        aktsData_EctsData = tabloVerileri3,
+                        ogrenmeCıktılarıData_LearningOutcomesData = tabloVerileri4,
 
 
 
 
-                        ingilizce = ingilizce_radiobutton.Checked,
-                        turkce = turkce_radiobutton.Checked,
-                        ikinci_yabanci_dil = ikinciyabancidil_radiobutton.Checked,
+                        ingilizce_English = ingilizce_radiobutton.Checked,
+                        turkce_Turkish = turkce_radiobutton.Checked,
+                        ikinciYabanciDil_SecondForeignLang = ikinciyabancidil_radiobutton.Checked,
 
-                        zorunlu = zorunlu_radiobutton.Checked,
-                        secmeli = secmeli_radiobutton.Checked,
+                        zorunlu_Required = zorunlu_radiobutton.Checked,
+                        secmeli_Elective = secmeli_radiobutton.Checked,
 
-                        on_lisans = onlisans_radiobutton.Checked,
-                        lisans = lisans_radiobutton.Checked,
-                        yuksek_lisans = yukseklisans_radiobutton.Checked,
-                        yuz_yuze = yuzyuze_radiobutton.Checked,
-                        cevrim_ici = cevrimici_radiobutton.Checked,
-                        karma = karma_radiobutton.Checked,
+                        onLisans_ShortCycle = onlisans_radiobutton.Checked,
+                        lisans_FirstCycle = lisans_radiobutton.Checked,
+                        yuksekLisans_SecondCycle = yukseklisans_radiobutton.Checked,
+                        doktora_ThirdCycle = doktora_radiobutton.Checked,
 
-                        temelders = radioButton1.Checked,
-                        uzmanlikalanders = radioButton2.Checked,
-                        destekders = radioButton3.Checked,  
-                        iletisimders = radioButton4.Checked,    
-                        beceriders = radioButton5.Checked,
+                        yuzYuze_FaceToFace = yuzyuze_radiobutton.Checked,
+                        cevrimIci_Online = cevrimici_radiobutton.Checked,
+                        karma_Blended = karma_radiobutton.Checked,
+
+                        temelders_Core = radioButton1.Checked,
+                        uzmanlikalanders_MajorArea = radioButton2.Checked,
+                        destekders_Supportive = radioButton3.Checked,  
+                        iletisimders_CommManagement = radioButton4.Checked,    
+                        beceriders_Skill = radioButton5.Checked,
 
                     };
 
@@ -338,7 +336,7 @@ namespace SE302MufreDATA
         {
 
             MufreDAT list = new MufreDAT();
-            list.SecilenDegerler = new List<string>();
+            list.SecilenDegerler_ChosenValues = new List<string>();
             
             List<List<string>> tabloVerileri = new List<List<string>>();
             
@@ -415,83 +413,83 @@ namespace SE302MufreDATA
 
                 if (ingilizce_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(ingilizce_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(ingilizce_radiobutton.Text);
                 }
 
                 if (turkce_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(turkce_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(turkce_radiobutton.Text);
                 }
 
                 if (ikinciyabancidil_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(ikinciyabancidil_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(ikinciyabancidil_radiobutton.Text);
                 }
 
                 if (zorunlu_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(zorunlu_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(zorunlu_radiobutton.Text);
                 }
 
                 if (secmeli_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(secmeli_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(secmeli_radiobutton.Text);
                 }
 
                 if (onlisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(onlisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(onlisans_radiobutton.Text);
                 }
 
                 if (lisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(lisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(lisans_radiobutton.Text);
                 }
 
                 if (yukseklisans_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(yukseklisans_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(yukseklisans_radiobutton.Text);
                 }
 
                 if (doktora_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(doktora_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(doktora_radiobutton.Text);
                 }
 
                 if (yuzyuze_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(yuzyuze_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(yuzyuze_radiobutton.Text);
                 }
 
                 if (cevrimici_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(cevrimici_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(cevrimici_radiobutton.Text);
                 }
 
                 if (karma_radiobutton.Checked)
                 {
-                    list.SecilenDegerler.Add(karma_radiobutton.Text);
+                    list.SecilenDegerler_ChosenValues.Add(karma_radiobutton.Text);
                 }
 
                 if (radioButton1.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton1.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton1.Text);
                 }
                 if (radioButton2.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton2.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton2.Text);
                 }
                 if (radioButton3.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton3.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton3.Text);
                 }
                 if (radioButton4.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton4.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton4.Text);
                 }
                 if (radioButton5.Checked)
                 {
-                    list.SecilenDegerler.Add(radioButton5.Text);
+                    list.SecilenDegerler_ChosenValues.Add(radioButton5.Text);
                 }
 
 
@@ -516,9 +514,6 @@ namespace SE302MufreDATA
                 string materyal = materyal_textbox.Text;
                 string kisise_notlar = kisisel_notlar_textbox.Text;
              
-                
-             
-
 
 
                 // Geçerli tarih ve saat bilgisini al
@@ -544,57 +539,58 @@ namespace SE302MufreDATA
                         duzenleyenKisi_editorName = duzenleyenKisi_editorName,
 
 
-                        dersin_adi = dersin_adi,
-                        dersin_kodu = dersin_kodu,
-                        guz = guz,
-                        bahar = bahar,
-                        teori = teori,
-                        uygulama_lab = uyglab,
-                        akts = akts,
-                        yerel_kredi = kredi,
-                        on_kosullar = kosul,
-                        yontem_teknik = teknik,
-                        koordinator = koordinator,
-                        ogrtmeleman = ogrtmeleman,
-                        yardimci = yardimci,
-                        dersin_amaci = dersin_amaci,
-                        ogrenme_cikti = ogrenme_cikti,  
-                        ders_tanimi = ders_tanimi,
-                        ders_kitabi = ders_kitabi,
-                        materyal = materyal,
-                        kisisel_notlar = kisise_notlar,
+                        dersinAdi_CourseName = dersin_adi,
+                        dersinKodu_Code = dersin_kodu,
+                        guz_Fall = guz,
+                        bahar_Spring = bahar,
+                        teori_Theory = teori,
+                        uygulamaLab_ApplicationLab = uyglab,
+                        akts_ects = akts,
+                        yerelKredi_LocalCredits = kredi,
+                        onKosullar_Prerequisities = kosul,
+                        yontemTeknik_MethodsTechniques = teknik,
+                        koordinator_Coordinator = koordinator,
+                        ogrtmeleman_Lecturer = ogrtmeleman,
+                        yardimci_Assistant = yardimci,
+                        dersinAmaci_CourseObjectives = dersin_amaci,
+                        ogrenmeCikti_LearningOutcomes = ogrenme_cikti,  
+                        dersTanimi_CourseDescripiton = ders_tanimi,
+                        dersKitabi_CourseBook = ders_kitabi,
+                        materyal_Material = materyal,
+                        kisiselNotlar_PersonalNotes = kisise_notlar,
                        
                       
                     
 
-
-                        Veriler = tabloVerileri,
-                        Veriler2 = tabloVerileri2,
-                        Veriler3 = tabloVerileri3,
-                        Veriler4 = tabloVerileri4,
-
+                        haftalıkKonular_WeeklySubjects = tabloVerileri2,
+                        degerlendirmeOlcutleri_Assessment = tabloVerileri,
+                        aktsData_EctsData = tabloVerileri3,
+                        ogrenmeCıktılarıData_LearningOutcomesData = tabloVerileri4,
 
 
 
-                        ingilizce = ingilizce_radiobutton.Checked,
-                        turkce = turkce_radiobutton.Checked,
-                        ikinci_yabanci_dil = ikinciyabancidil_radiobutton.Checked,
 
-                        zorunlu = zorunlu_radiobutton.Checked,
-                        secmeli = secmeli_radiobutton.Checked,
+                        ingilizce_English = ingilizce_radiobutton.Checked,
+                        turkce_Turkish = turkce_radiobutton.Checked,
+                        ikinciYabanciDil_SecondForeignLang = ikinciyabancidil_radiobutton.Checked,
 
-                        on_lisans = onlisans_radiobutton.Checked,
-                        lisans = lisans_radiobutton.Checked,
-                        yuksek_lisans = yukseklisans_radiobutton.Checked,
-                        yuz_yuze = yuzyuze_radiobutton.Checked,
-                        cevrim_ici = cevrimici_radiobutton.Checked,
-                        karma = karma_radiobutton.Checked,
+                        zorunlu_Required = zorunlu_radiobutton.Checked,
+                        secmeli_Elective = secmeli_radiobutton.Checked,
 
-                        temelders = radioButton1.Checked,
-                        uzmanlikalanders = radioButton2.Checked,
-                        destekders = radioButton3.Checked,  
-                        iletisimders = radioButton4.Checked,    
-                        beceriders = radioButton5.Checked,
+                        onLisans_ShortCycle = onlisans_radiobutton.Checked,
+                        lisans_FirstCycle = lisans_radiobutton.Checked,
+                        yuksekLisans_SecondCycle = yukseklisans_radiobutton.Checked,
+                        doktora_ThirdCycle = doktora_radiobutton.Checked,
+
+                        yuzYuze_FaceToFace = yuzyuze_radiobutton.Checked,
+                        cevrimIci_Online = cevrimici_radiobutton.Checked,
+                        karma_Blended = karma_radiobutton.Checked,
+
+                        temelders_Core = radioButton1.Checked,
+                        uzmanlikalanders_MajorArea = radioButton2.Checked,
+                        destekders_Supportive = radioButton3.Checked,  
+                        iletisimders_CommManagement = radioButton4.Checked,    
+                        beceriders_Skill = radioButton5.Checked,
 
                     };
 
@@ -642,28 +638,28 @@ namespace SE302MufreDATA
 
                     dataGridView1.Rows.Clear();
 
-                    foreach (List<string> satir in kisi.Veriler)
+                    foreach (List<string> satir in kisi.degerlendirmeOlcutleri_Assessment)
                     {
                         dataGridView1.Rows.Add(satir.ToArray());
                     }
 
                     dataGridView2.Rows.Clear();
 
-                    foreach (List<string> satir in kisi.Veriler2)
+                    foreach (List<string> satir in kisi.haftalıkKonular_WeeklySubjects)
                     {
                         dataGridView2.Rows.Add(satir.ToArray());
                     }
                     
                     dataGridView3.Rows.Clear();
 
-                    foreach (List<string> satir in kisi.Veriler3)
+                    foreach (List<string> satir in kisi.aktsData_EctsData)
                     {
                         dataGridView3.Rows.Add(satir.ToArray());
                     }
 
                     dataGridView4.Rows.Clear();
 
-                    foreach (List<string> satir in kisi.Veriler4)
+                    foreach (List<string> satir in kisi.ogrenmeCıktılarıData_LearningOutcomesData)
                     {
                         dataGridView4.Rows.Add(satir.ToArray());
                     }
@@ -674,57 +670,57 @@ namespace SE302MufreDATA
                     duzenleyen_kisi_textbox.Text = kisi.duzenleyenKisi_editorName;
                    
 
-                    dersinadi_textbox.Text = kisi.dersin_adi;
+                    dersinadi_textbox.Text = kisi.dersinAdi_CourseName;
 
-                    kod_textbox.Text = kisi.dersin_kodu;
-                    guz_textbox.Text = kisi.guz;
-                    bahar_textbox.Text = kisi.bahar;
-                    teori_textbox.Text = kisi.teori;
-                    uyglab_textbox.Text = kisi.uygulama_lab;
-                    kredi_textbox.Text = kisi.yerel_kredi;
-                    akts_textbox.Text = kisi.akts;
+                    kod_textbox.Text = kisi.dersinKodu_Code;
+                    guz_textbox.Text = kisi.guz_Fall;
+                    bahar_textbox.Text = kisi.bahar_Spring;
+                    teori_textbox.Text = kisi.teori_Theory;
+                    uyglab_textbox.Text = kisi.uygulamaLab_ApplicationLab;
+                    kredi_textbox.Text = kisi.yerelKredi_LocalCredits;
+                    akts_textbox.Text = kisi.akts_ects;
 
-                    kosul_textbox.Text = kisi.on_kosullar;
+                    kosul_textbox.Text = kisi.onKosullar_Prerequisities;
 
-                    teknik_textbox.Text = kisi.yontem_teknik;
+                    teknik_textbox.Text = kisi.yontemTeknik_MethodsTechniques;
                     
-                    koordinator_textbox.Text = kisi.koordinator;
-                    ogrtmeleman_textbox.Text = kisi.ogrtmeleman;
-                    yardimci_textbox.Text = kisi.yardimci;
+                    koordinator_textbox.Text = kisi.koordinator_Coordinator;
+                    ogrtmeleman_textbox.Text = kisi.ogrtmeleman_Lecturer;
+                    yardimci_textbox.Text = kisi.yardimci_Assistant;
 
-                    dersinamaci_textbox.Text = kisi.dersin_amaci;
-                    ogrenmecikti_textbox.Text = kisi.ogrenme_cikti;
-                    derstanimi_textbox.Text = kisi.ders_tanimi;
-                    derskitabi_textbox.Text = kisi.ders_kitabi;
-                    materyal_textbox.Text = kisi.materyal;
-                    kisisel_notlar_textbox.Text = kisi.kisisel_notlar;
+                    dersinamaci_textbox.Text = kisi.dersinAmaci_CourseObjectives;
+                    ogrenmecikti_textbox.Text = kisi.ogrenmeCikti_LearningOutcomes;
+                    derstanimi_textbox.Text = kisi.dersTanimi_CourseDescripiton;
+                    derskitabi_textbox.Text = kisi.dersKitabi_CourseBook;
+                    materyal_textbox.Text = kisi.materyal_Material;
+                    kisisel_notlar_textbox.Text = kisi.kisiselNotlar_PersonalNotes;
 
                    
 
 
-                    turkce_radiobutton.Checked = kisi.turkce;
-                    ingilizce_radiobutton.Checked = kisi.ingilizce;
-                    ikinciyabancidil_radiobutton.Checked = kisi.ikinci_yabanci_dil;
+                    turkce_radiobutton.Checked = kisi.turkce_Turkish;
+                    ingilizce_radiobutton.Checked = kisi.ingilizce_English;
+                    ikinciyabancidil_radiobutton.Checked = kisi.ikinciYabanciDil_SecondForeignLang;
 
-                    zorunlu_radiobutton.Checked = kisi.zorunlu;
-                    secmeli_radiobutton.Checked = kisi.secmeli;
+                    zorunlu_radiobutton.Checked = kisi.zorunlu_Required;
+                    secmeli_radiobutton.Checked = kisi.secmeli_Elective;
 
-                    onlisans_radiobutton.Checked = kisi.on_lisans;
-                    lisans_radiobutton.Checked = kisi.lisans;
-                    yukseklisans_radiobutton.Checked = kisi.yuksek_lisans;
-                    doktora_radiobutton.Checked = kisi.doktora;
+                    onlisans_radiobutton.Checked = kisi.onLisans_ShortCycle;
+                    lisans_radiobutton.Checked = kisi.lisans_FirstCycle;
+                    yukseklisans_radiobutton.Checked = kisi.yuksekLisans_SecondCycle;
+                    doktora_radiobutton.Checked = kisi.doktora_ThirdCycle;
 
-                    yuzyuze_radiobutton.Checked = kisi.yuz_yuze;
-                    cevrimici_radiobutton.Checked = kisi.cevrim_ici;
-                    karma_radiobutton.Checked = kisi.karma;
+                    yuzyuze_radiobutton.Checked = kisi.yuzYuze_FaceToFace;
+                    cevrimici_radiobutton.Checked = kisi.cevrimIci_Online;
+                    karma_radiobutton.Checked = kisi.karma_Blended;
 
 
 
-                    radioButton1.Checked = kisi.temelders;
-                    radioButton2.Checked = kisi.uzmanlikalanders;
-                    radioButton3.Checked = kisi.destekders;
-                    radioButton4.Checked = kisi.iletisimders;
-                    radioButton5.Checked = kisi.beceriders;
+                    radioButton1.Checked = kisi.temelders_Core;
+                    radioButton2.Checked = kisi.uzmanlikalanders_MajorArea;
+                    radioButton3.Checked = kisi.destekders_Supportive;
+                    radioButton4.Checked = kisi.iletisimders_CommManagement;
+                    radioButton5.Checked = kisi.beceriders_Skill;
                   
                 }
             }
@@ -743,6 +739,7 @@ namespace SE302MufreDATA
 
         private void engButton_Click(object sender, EventArgs e)
         {
+            
             trButton.FlatStyle = FlatStyle.Standard;
             engButton.FlatStyle = FlatStyle.Flat;
             engButton.BackColor = Color.Orange;
@@ -806,7 +803,43 @@ namespace SE302MufreDATA
             is_yuku.HeaderText = "Workload";
             label1.Text = "One Who Edited ";
             label4.Text = "Date :";
+            Hafta.HeaderText = "Week";
+            yeterlilik.HeaderText = "Program Competencies / Outcomes\t";
+            //WeeklyEnglish
+            Tables.UpdateCellValue(dataGridView2, 14, 1, "Semester Review");
+            Tables.UpdateCellValue(dataGridView2, 15, 1, "Exam");
+            //AssessmentsEnglish
+            Tables.UpdateCellValue(dataGridView1, 0, 0, "Participation");
+            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratory / Application");
+            Tables.UpdateCellValue(dataGridView1, 2, 0, "Field Work");
+            Tables.UpdateCellValue(dataGridView1, 3, 0, "Quiz / Studio Critique");
+            Tables.UpdateCellValue(dataGridView1, 4, 0, "Homework / Assignment");
+            Tables.UpdateCellValue(dataGridView1, 5, 0, "Presentation / Jury");
+            Tables.UpdateCellValue(dataGridView1, 6, 0, "Project");
+            Tables.UpdateCellValue(dataGridView1, 7, 0, "Portfolio");
+            Tables.UpdateCellValue(dataGridView1, 8, 0, "Seminar / Workshop");
+            Tables.UpdateCellValue(dataGridView1, 9, 0, "Oral Exam");
+            Tables.UpdateCellValue(dataGridView1, 10, 0, "Midterm");
+            Tables.UpdateCellValue(dataGridView1, 11, 0, "Final Exam");
+            Tables.UpdateCellValue(dataGridView1, 12, 0, "Total");
+            //ECTS
+            Tables.UpdateCellValue(dataGridView1, 0, 0, "Teorik Ders Saati");
+            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratuvar / Uygulama Saati");
+            Tables.UpdateCellValue(dataGridView1, 2, 0, "Sınıf Dışı Ders Çalışması");
+            Tables.UpdateCellValue(dataGridView1, 3, 0, "Arazi Çalışması");
+            Tables.UpdateCellValue(dataGridView1, 4, 0, "Küçük Sınav / Stüdyo Kritiği");
+            Tables.UpdateCellValue(dataGridView1, 5, 0, "Ödev");
+            Tables.UpdateCellValue(dataGridView1, 6, 0, "Sunum / Juri Önünde Sunum");
+            Tables.UpdateCellValue(dataGridView1, 7, 0, "Proje");
+            Tables.UpdateCellValue(dataGridView1, 8, 0, "Portfolyo");
+            Tables.UpdateCellValue(dataGridView1, 9, 0, "Seminer / Çalıştay");
+            Tables.UpdateCellValue(dataGridView1, 10, 0, "Sözlü Sınav");
+            Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
+            Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
+            Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
         }
+            
+        
         private void trButton_Click(object sender, EventArgs e)
         {
             engButton.FlatStyle = FlatStyle.Standard;
@@ -872,11 +905,41 @@ namespace SE302MufreDATA
             is_yuku.HeaderText = "İş Yükü";
             label1.Text = "Düzenleyen Kişi ";
             label4.Text = "Tarih :";
+            Hafta.HeaderText = "Hafta";
+            yeterlilik.HeaderText = "Program Yeterlilikleri / Çıktıları\t";
+            //HaftalıkTürkçe
+            Tables.UpdateCellValue(dataGridView2, 14, 1, "Dersin Gözden Geçirilmesi");
+            Tables.UpdateCellValue(dataGridView2, 15, 1, "Fina Sınavı");
+            //DeğerlendirmeÖlçütleriTürkçe
+            Tables.UpdateCellValue(dataGridView1, 0, 0, "Katılım");
+            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratuvar / Uygulama");
+            Tables.UpdateCellValue(dataGridView1, 2, 0, "Arazi Çalışması");
+            Tables.UpdateCellValue(dataGridView1, 3, 0, "Küçük Sınav / Stüdyo Kritiği");
+            Tables.UpdateCellValue(dataGridView1, 4, 0, "Ödev");
+            Tables.UpdateCellValue(dataGridView1, 5, 0, "Sunum / Juri Önünde Sunum");
+            Tables.UpdateCellValue(dataGridView1, 6, 0, "Proje");
+            Tables.UpdateCellValue(dataGridView1, 7, 0, "Portfolyo");
+            Tables.UpdateCellValue(dataGridView1, 8, 0, "Seminer / Çalıştay");
+            Tables.UpdateCellValue(dataGridView1, 9, 0, "Sözlü Sınav");
+            Tables.UpdateCellValue(dataGridView1, 10, 0, "Ara Sınav");
+            Tables.UpdateCellValue(dataGridView1, 11, 0, "Final Sınavı");
+            Tables.UpdateCellValue(dataGridView1, 12, 0, "Toplam");
+            //AKTS
+            Tables.UpdateCellValue(dataGridView1, 0, 0, "Teorik Ders Saati");
+            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratuvar / Uygulama Saati");
+            Tables.UpdateCellValue(dataGridView1, 2, 0, "Sınıf Dışı Ders Çalışması");
+            Tables.UpdateCellValue(dataGridView1, 3, 0, "Arazi Çalışması");
+            Tables.UpdateCellValue(dataGridView1, 4, 0, "Küçük Sınav / Stüdyo Kritiği");
+            Tables.UpdateCellValue(dataGridView1, 5, 0, "Ödev");
+            Tables.UpdateCellValue(dataGridView1, 6, 0, "Sunum / Juri Önünde Sunum");
+            Tables.UpdateCellValue(dataGridView1, 7, 0, "Proje");
+            Tables.UpdateCellValue(dataGridView1, 8, 0, "Portfolyo");
+            Tables.UpdateCellValue(dataGridView1, 9, 0, "Seminer / Çalıştay");
+            Tables.UpdateCellValue(dataGridView1, 10, 0, "Sözlü Sınav");
+            Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
+            Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
+            Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
         }
      
     }
-
-        
-   }
-
-
+}
