@@ -17,13 +17,14 @@ namespace SE302MufreDATA
     {
         private string firstJsonFilePath;
         private string secondJsonFilePath;
+        private bool isEngButtonClicked = false;
+        private bool isTrButtonClicked = true;
 
         public Form1()
         {
             InitializeComponent();
 
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Width = 1400;   // Formun genişliğini 1200 piksel olarak ayarlar
@@ -38,13 +39,11 @@ namespace SE302MufreDATA
             dataGridView3.CellEndEdit += DataGridView3_CellEndEdit; // DataGridView3_CellEndEdit metodu
 
         }
-
         private void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             // DataGridView1_CellEndEdit metodunu çağırma
             Tables.DataGridView1_CellEndEdit(dataGridView1);
         }
-
         private void DataGridView3_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             Tables.DataGridView3_CellEndEdit(dataGridView3);
@@ -273,8 +272,8 @@ namespace SE302MufreDATA
                         onKosullar_Prerequisities = kosul,
                         yontemTeknik_MethodsTechniques = teknik,
                         koordinator_Coordinator = koordinator,
-                        ogrtmeleman_Lecturer = ogrtmeleman,
-                        yardimci_Assistant = yardimci,
+                        ogretimElemani_Lecturer = ogrtmeleman,
+                        asistan_Assistant = yardimci,
                         dersinAmaci_CourseObjectives = dersin_amaci,
                         ogrenmeCikti_LearningOutcomes = ogrenme_cikti,  
                         dersTanimi_CourseDescripiton = ders_tanimi,
@@ -307,11 +306,11 @@ namespace SE302MufreDATA
                         cevrimIci_Online = cevrimici_radiobutton.Checked,
                         karma_Blended = karma_radiobutton.Checked,
 
-                        temelders_Core = radioButton1.Checked,
-                        uzmanlikalanders_MajorArea = radioButton2.Checked,
-                        destekders_Supportive = radioButton3.Checked,  
-                        iletisimders_CommManagement = radioButton4.Checked,    
-                        beceriders_Skill = radioButton5.Checked,
+                        temelDers_Core = radioButton1.Checked,
+                        uzmanlikAlanDers_MajorArea = radioButton2.Checked,
+                        destekDers_Supportive = radioButton3.Checked,  
+                        iletisimDers_CommManagement = radioButton4.Checked,    
+                        beceriDers_Skill = radioButton5.Checked,
 
                     };
 
@@ -550,8 +549,8 @@ namespace SE302MufreDATA
                         onKosullar_Prerequisities = kosul,
                         yontemTeknik_MethodsTechniques = teknik,
                         koordinator_Coordinator = koordinator,
-                        ogrtmeleman_Lecturer = ogrtmeleman,
-                        yardimci_Assistant = yardimci,
+                        ogretimElemani_Lecturer = ogrtmeleman,
+                        asistan_Assistant = yardimci,
                         dersinAmaci_CourseObjectives = dersin_amaci,
                         ogrenmeCikti_LearningOutcomes = ogrenme_cikti,  
                         dersTanimi_CourseDescripiton = ders_tanimi,
@@ -586,11 +585,11 @@ namespace SE302MufreDATA
                         cevrimIci_Online = cevrimici_radiobutton.Checked,
                         karma_Blended = karma_radiobutton.Checked,
 
-                        temelders_Core = radioButton1.Checked,
-                        uzmanlikalanders_MajorArea = radioButton2.Checked,
-                        destekders_Supportive = radioButton3.Checked,  
-                        iletisimders_CommManagement = radioButton4.Checked,    
-                        beceriders_Skill = radioButton5.Checked,
+                        temelDers_Core = radioButton1.Checked,
+                        uzmanlikAlanDers_MajorArea = radioButton2.Checked,
+                        destekDers_Supportive = radioButton3.Checked,  
+                        iletisimDers_CommManagement = radioButton4.Checked,    
+                        beceriDers_Skill = radioButton5.Checked,
 
                     };
 
@@ -685,8 +684,8 @@ namespace SE302MufreDATA
                     teknik_textbox.Text = kisi.yontemTeknik_MethodsTechniques;
                     
                     koordinator_textbox.Text = kisi.koordinator_Coordinator;
-                    ogrtmeleman_textbox.Text = kisi.ogrtmeleman_Lecturer;
-                    yardimci_textbox.Text = kisi.yardimci_Assistant;
+                    ogrtmeleman_textbox.Text = kisi.ogretimElemani_Lecturer;
+                    yardimci_textbox.Text = kisi.asistan_Assistant;
 
                     dersinamaci_textbox.Text = kisi.dersinAmaci_CourseObjectives;
                     ogrenmecikti_textbox.Text = kisi.ogrenmeCikti_LearningOutcomes;
@@ -716,11 +715,11 @@ namespace SE302MufreDATA
 
 
 
-                    radioButton1.Checked = kisi.temelders_Core;
-                    radioButton2.Checked = kisi.uzmanlikalanders_MajorArea;
-                    radioButton3.Checked = kisi.destekders_Supportive;
-                    radioButton4.Checked = kisi.iletisimders_CommManagement;
-                    radioButton5.Checked = kisi.beceriders_Skill;
+                    radioButton1.Checked = kisi.temelDers_Core;
+                    radioButton2.Checked = kisi.uzmanlikAlanDers_MajorArea;
+                    radioButton3.Checked = kisi.destekDers_Supportive;
+                    radioButton4.Checked = kisi.iletisimDers_CommManagement;
+                    radioButton5.Checked = kisi.beceriDers_Skill;
                   
                 }
             }
@@ -748,7 +747,7 @@ namespace SE302MufreDATA
 
             string differences = GetDifferences(token1, token2);
 
-            MessageBox.Show(differences, "Farkları", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(differences, "FARKLAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private string SelectFileAndReadContent(string dialogTitle)
         {
@@ -778,7 +777,7 @@ namespace SE302MufreDATA
             }
             else
             {
-                return "Farkları:\r\n" + differences.ToString();
+                return differences.ToString();
             }
         }
         private void CompareTokens(JToken token1, JToken token2, StringBuilder differences, string path)
@@ -796,17 +795,17 @@ namespace SE302MufreDATA
 
                         foreach (var addedProperty in addedProperties)
                         {
-                            differences.AppendLine($"Eklenen Öğe '{path}.{addedProperty.Name}': {addedProperty.Value}");
+                            differences.AppendLine($"EKLENEN ÖĞE [ {GetModifiedPath(path)}{addedProperty.Name} ]: {addedProperty.Value}\n");
                         }
 
                         foreach (var removedProperty in removedProperties)
                         {
-                            differences.AppendLine($"Silinen Öğe '{path}.{removedProperty.Name}': {removedProperty.Value}");
+                            differences.AppendLine($"SİLİNEN ÖĞE [ {GetModifiedPath(path)}{removedProperty.Name} ]: {removedProperty.Value}\n");
                         }
 
                         foreach (var commonProperty in obj1.Properties().Where(p => obj2.Properties().Any(p2 => p2.Name == p.Name)))
                         {
-                            CompareTokens(commonProperty.Value, obj2[commonProperty.Name], differences, $"{path}.{commonProperty.Name}");
+                            CompareTokens(commonProperty.Value, obj2[commonProperty.Name], differences, $"{path}{commonProperty.Name}\n");
                         }
 
                         break;
@@ -819,11 +818,11 @@ namespace SE302MufreDATA
                         {
                             if (i >= arr1.Count)
                             {
-                                differences.AppendLine($"Eklenen Değer '{path}[{i}]': {arr2[i]}");
+                                differences.AppendLine($"EKLENEN DEĞER [ {GetModifiedPath(path)}[{i}] ]: {arr2[i]}\n");
                             }
                             else if (i >= arr2.Count)
                             {
-                                differences.AppendLine($"Silinen Değer '{path}[{i}]': {arr1[i]}");
+                                differences.AppendLine($"SİLİNEN DEĞER [ {GetModifiedPath(path)}[{i}] ]: {arr1[i]}\n");
                             }
                             else
                             {
@@ -834,12 +833,41 @@ namespace SE302MufreDATA
                         break;
 
                     default:
-                        differences.AppendLine($"Buradaki Değerler '{path}': '{token1}' -> '{token2}'");
+                        differences.AppendLine($"DEĞİŞTİRİLEN DEĞERLER [ {GetModifiedPath(path)} ]: '{token1}' -> '{token2}'\n");
                         break;
                 }
             }
         }
-        //FARK KARŞILAŞTIRMA
+        private string GetModifiedPath(string originalPath)
+        {
+            if (isEngButtonClicked)
+            {
+                // Read after "_", excluding the last character
+                int underscoreIndex = originalPath.LastIndexOf('_');
+                string pathAfterUnderscore = underscoreIndex >= 0 ? originalPath.Substring(underscoreIndex + 1, originalPath.Length - underscoreIndex - 2) : originalPath;
+
+                // Insert spaces before uppercase letters and capitalize the first letter
+                string modifiedPath = string.Concat(pathAfterUnderscore.Select((c, i) => i > 0 && char.IsUpper(c) ? " " + c.ToString() : c.ToString())).Trim();
+
+                return modifiedPath;
+            }
+            else if (isTrButtonClicked)
+            {
+                // Read before "_", insert spaces before uppercase letters, and capitalize the first letter
+                string modifiedPath = originalPath
+                    .Split('_')[0] // Take the part before the underscore
+                    .Select((c, i) => i > 0 && char.IsUpper(c) ? " " + char.ToUpper(c) : char.ToUpper(c).ToString())
+                    .Aggregate((s1, s2) => s1 + s2)
+                    .Trim();
+
+                return modifiedPath;
+            }
+            else
+            {
+                // Default behavior
+                return originalPath;
+            }
+        } // FARK KARŞILAŞTIRMA
 
         private void engButton_Click(object sender, EventArgs e)
         {
@@ -848,6 +876,8 @@ namespace SE302MufreDATA
             engButton.FlatStyle = FlatStyle.Flat;
             engButton.BackColor = Color.Orange;
             trButton.BackColor = SystemColors.Control;
+            isEngButtonClicked = true;
+            isTrButtonClicked = false;
             btnKaydet.Visible = false;
             btnKaydetENG.Visible = true;
             btnAc.Text = "OPEN";
@@ -948,6 +978,8 @@ namespace SE302MufreDATA
             trButton.FlatStyle = FlatStyle.Flat;
             trButton.BackColor = Color.Orange;
             engButton.BackColor = SystemColors.Control;
+            isEngButtonClicked = false;
+            isTrButtonClicked = true;
             btnKaydet.Visible = true;
             btnKaydetENG.Visible = false;
             btnAc.Text = "AÇ";
@@ -1041,8 +1073,6 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
             Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
-        }
-        //ENG-TR
-     
+        } // ENG-TR
     }
 }

@@ -41,8 +41,8 @@ namespace SE302MufreDATA
         public string yontemTeknik_MethodsTechniques { get; set; }
 
         public string koordinator_Coordinator { get; set; }
-        public string ogrtmeleman_Lecturer { get; set; }
-        public string yardimci_Assistant { get; set; }
+        public string ogretimElemani_Lecturer { get; set; }
+        public string asistan_Assistant { get; set; }
 
         public string dersKitabi_CourseBook { get; set; }
 
@@ -55,11 +55,11 @@ namespace SE302MufreDATA
         public string ogrenmeCikti_LearningOutcomes { get; set; }
         public string dersTanimi_CourseDescripiton { get; set; }
 
-        public bool temelders_Core { get; set; }
-        public bool uzmanlikalanders_MajorArea { get; set; }
-        public bool destekders_Supportive { get; set; }
-        public bool iletisimders_CommManagement { get; set; }
-        public bool beceriders_Skill { get; set; }
+        public bool temelDers_Core { get; set; }
+        public bool uzmanlikAlanDers_MajorArea { get; set; }
+        public bool destekDers_Supportive { get; set; }
+        public bool iletisimDers_CommManagement { get; set; }
+        public bool beceriDers_Skill { get; set; }
 
         public List<List<string>> haftalıkKonular_WeeklySubjects { get; set; } // Tablo2 Listesi
 
