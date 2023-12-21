@@ -734,8 +734,112 @@ namespace SE302MufreDATA
 
         private void comparerbtn_Click(object sender, EventArgs e)
         {
-          
+            string file1Content = SelectFileAndReadContent("İlk JSON Dosyasını Seçiniz");
+            string file2Content = SelectFileAndReadContent("İkinci JSON Dosyasını Seçiniz");
+
+            if (string.IsNullOrEmpty(file1Content) || string.IsNullOrEmpty(file2Content))
+            {
+                MessageBox.Show("Lütfen Karşılaştırma Yapmadan Önce İki JSON Dosyası Seçiniz", "!!HATA!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            JToken token1 = JToken.Parse(file1Content);
+            JToken token2 = JToken.Parse(file2Content);
+
+            string differences = GetDifferences(token1, token2);
+
+            MessageBox.Show(differences, "Farkları", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        private string SelectFileAndReadContent(string dialogTitle)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "JSON Files|*.json|All Files|*.*";
+                openFileDialog.Title = dialogTitle;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFile = openFileDialog.FileName;
+                    return File.ReadAllText(selectedFile);
+                }
+            }
+
+            return null;
+        }
+        private string GetDifferences(JToken token1, JToken token2)
+        {
+            StringBuilder differences = new StringBuilder();
+
+            CompareTokens(token1, token2, differences, "");
+
+            if (differences.Length == 0)
+            {
+                return "JSON Dosyaları Birbirinin Aynısı";
+            }
+            else
+            {
+                return "Farkları:\r\n" + differences.ToString();
+            }
+        }
+        private void CompareTokens(JToken token1, JToken token2, StringBuilder differences, string path)
+        {
+            if (!JToken.DeepEquals(token1, token2))
+            {
+                switch (token1.Type)
+                {
+                    case JTokenType.Object:
+                        var obj1 = (JObject)token1;
+                        var obj2 = (JObject)token2;
+
+                        var addedProperties = obj2.Properties().Where(p => !obj1.Properties().Any(p1 => p1.Name == p.Name));
+                        var removedProperties = obj1.Properties().Where(p => !obj2.Properties().Any(p2 => p2.Name == p.Name));
+
+                        foreach (var addedProperty in addedProperties)
+                        {
+                            differences.AppendLine($"Eklenen Öğe '{path}.{addedProperty.Name}': {addedProperty.Value}");
+                        }
+
+                        foreach (var removedProperty in removedProperties)
+                        {
+                            differences.AppendLine($"Silinen Öğe '{path}.{removedProperty.Name}': {removedProperty.Value}");
+                        }
+
+                        foreach (var commonProperty in obj1.Properties().Where(p => obj2.Properties().Any(p2 => p2.Name == p.Name)))
+                        {
+                            CompareTokens(commonProperty.Value, obj2[commonProperty.Name], differences, $"{path}.{commonProperty.Name}");
+                        }
+
+                        break;
+
+                    case JTokenType.Array:
+                        var arr1 = (JArray)token1;
+                        var arr2 = (JArray)token2;
+
+                        for (int i = 0; i < Math.Max(arr1.Count, arr2.Count); i++)
+                        {
+                            if (i >= arr1.Count)
+                            {
+                                differences.AppendLine($"Eklenen Değer '{path}[{i}]': {arr2[i]}");
+                            }
+                            else if (i >= arr2.Count)
+                            {
+                                differences.AppendLine($"Silinen Değer '{path}[{i}]': {arr1[i]}");
+                            }
+                            else
+                            {
+                                CompareTokens(arr1[i], arr2[i], differences, $"{path}[{i}]");
+                            }
+                        }
+
+                        break;
+
+                    default:
+                        differences.AppendLine($"Buradaki Değerler '{path}': '{token1}' -> '{token2}'");
+                        break;
+                }
+            }
+        }
+        //FARK KARŞILAŞTIRMA
 
         private void engButton_Click(object sender, EventArgs e)
         {
@@ -838,8 +942,6 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
             Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
         }
-            
-        
         private void trButton_Click(object sender, EventArgs e)
         {
             engButton.FlatStyle = FlatStyle.Standard;
@@ -940,6 +1042,7 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
             Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
         }
+        //ENG-TR
      
     }
 }
