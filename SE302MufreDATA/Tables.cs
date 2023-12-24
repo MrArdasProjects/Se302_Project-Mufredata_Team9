@@ -21,7 +21,7 @@ namespace SE302MufreDATA
     }
 
        
-        public static void DataGridSettings3(DataGridView datagridview3)
+        public static void DataGridSettings3(DataGridView datagridview3) // AKTS İş Yükü Tablosu
         {
             datagridview3.RowCount = 14; // 14 satır
             datagridview3.ColumnCount = 4; // 4 sütun
@@ -41,7 +41,9 @@ namespace SE302MufreDATA
             for (int i = 0; i < datagridview3.Rows.Count; i++)
             {
                 datagridview3.Rows[0].Cells[0].Value = "Teorik Ders Saati";
+                datagridview3.Rows[0].Cells[1].Value = "16";
                 datagridview3.Rows[1].Cells[0].Value = "Laboratuvar / Uygulama Ders Saati";
+                datagridview3.Rows[1].Cells[1].Value = "16";
                 datagridview3.Rows[2].Cells[0].Value = "Sınıf Dışı Ders Çalışması";
                 datagridview3.Rows[3].Cells[0].Value = "Arazi Çalışması";
                 datagridview3.Rows[4].Cells[0].Value = "Küçük Sınav / Stüdyo Kritiği";
@@ -55,7 +57,7 @@ namespace SE302MufreDATA
                 datagridview3.Rows[12].Cells[0].Value = "Final Sınavı";
                 datagridview3.Rows[13].Cells[0].Value = "Toplam";
             }
-        } // AKTS İş Yükü Tablosu
+        }
 
         public static void DataGridSettings2(DataGridView datagridview2) // Haftalık Konular Tablosu
         {

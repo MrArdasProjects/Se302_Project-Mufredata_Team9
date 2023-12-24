@@ -251,7 +251,7 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Silver;
             this.label27.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label27.Location = new System.Drawing.Point(51, 573);
+            this.label27.Location = new System.Drawing.Point(45, 573);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(151, 16);
@@ -283,7 +283,7 @@
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Silver;
             this.label26.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label26.Location = new System.Drawing.Point(81, 474);
+            this.label26.Location = new System.Drawing.Point(110, 474);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(84, 16);
@@ -410,7 +410,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Silver;
             this.label25.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(81, 380);
+            this.label25.Location = new System.Drawing.Point(78, 380);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(116, 16);
@@ -685,7 +685,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.comparerbtn);
             this.tabPage1.Controls.Add(this.yardimci_textbox);
             this.tabPage1.Controls.Add(this.label21);
             this.tabPage1.Controls.Add(this.pictureBox18);
@@ -749,6 +748,7 @@
             this.tabPage1.Controls.Add(this.engButton);
             this.tabPage1.Controls.Add(this.trButton);
             this.tabPage1.Controls.Add(this.btnAc);
+            this.tabPage1.Controls.Add(this.comparerbtn);
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
@@ -760,12 +760,12 @@
             // 
             // comparerbtn
             // 
-            this.comparerbtn.Location = new System.Drawing.Point(283, 769);
+            this.comparerbtn.Location = new System.Drawing.Point(280, 769);
             this.comparerbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comparerbtn.Name = "comparerbtn";
-            this.comparerbtn.Size = new System.Drawing.Size(90, 50);
+            this.comparerbtn.Size = new System.Drawing.Size(126, 51);
             this.comparerbtn.TabIndex = 143;
-            this.comparerbtn.Text = "Comparer Et";
+            this.comparerbtn.Text = "KARŞILAŞTIR";
             this.comparerbtn.UseVisualStyleBackColor = true;
             this.comparerbtn.Click += new System.EventHandler(this.comparerbtn_Click);
             // 
@@ -785,7 +785,7 @@
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Silver;
             this.label21.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(87, 676);
+            this.label21.Location = new System.Drawing.Point(138, 676);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(99, 16);
@@ -809,7 +809,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Silver;
             this.label20.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(78, 616);
+            this.label20.Location = new System.Drawing.Point(85, 616);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(150, 16);
@@ -853,7 +853,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Silver;
             this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(79, 562);
+            this.label12.Location = new System.Drawing.Point(87, 562);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(150, 16);
@@ -1116,7 +1116,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Silver;
             this.label18.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(101, 426);
+            this.label18.Location = new System.Drawing.Point(99, 426);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(138, 16);
@@ -1143,7 +1143,7 @@
             this.label17.Location = new System.Drawing.Point(132, 377);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 16);
+            this.label17.Size = new System.Drawing.Size(107, 16);
             this.label17.TabIndex = 113;
             this.label17.Text = "Dersin Düzeyi";
             // 
@@ -1414,7 +1414,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Silver;
             this.label14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(133, 249);
+            this.label14.Location = new System.Drawing.Point(137, 249);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 16);
@@ -1438,7 +1438,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Silver;
             this.label13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(667, 168);
+            this.label13.Location = new System.Drawing.Point(664, 168);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(43, 16);

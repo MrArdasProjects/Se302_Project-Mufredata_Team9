@@ -50,7 +50,7 @@ namespace SE302MufreDATA
         }
 
 
-
+        // JSON Kaydetme 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
 
@@ -233,10 +233,6 @@ namespace SE302MufreDATA
                 string materyal = materyal_textbox.Text;
                 string kisise_notlar = kisisel_notlar_textbox.Text;
              
-                
-             
-
-
 
                 // Geçerli tarih ve saat bilgisini al
                 DateTime now = DateTime.Now;
@@ -253,6 +249,16 @@ namespace SE302MufreDATA
                 {
                     // Seçilen dosyanın yolu
                     string dosyaYolu = saveFileDialog.FileName;
+                    string folderPath = Path.Combine(Path.GetDirectoryName(dosyaYolu), dersin_kodu);
+
+                    // Create the folder if it doesn't exist
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    // Append the file name to the folder path
+                    string fullFilePath = Path.Combine(folderPath, Path.GetFileName(dosyaYolu));
 
                     // JSON verilerini temsil eden bir nesne oluştur
                     MufreDAT kisi = new MufreDAT
@@ -320,7 +326,7 @@ namespace SE302MufreDATA
                     string json = JsonConvert.SerializeObject(kisi);
 
                     // JSON'u dosyaya kaydet
-                    System.IO.File.WriteAllText(dosyaYolu, json);
+                    System.IO.File.WriteAllText(fullFilePath, json);
 
                     MessageBox.Show("JSON dosyası kaydedildi.");
                 }
@@ -330,7 +336,8 @@ namespace SE302MufreDATA
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
             }
-        } // JSON Kaydetme 
+        } 
+        // JSON Kaydetme ENG
         private void btnKaydetENG_Click(object sender, EventArgs e)
         {
 
@@ -523,13 +530,24 @@ namespace SE302MufreDATA
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "JSON Files|*.json|All Files|*.*";
                 saveFileDialog.Title = "Save JSON File";
-                saveFileDialog.FileName = $"syllabus {dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyenKisi_editorName}_ENG.json";
+                saveFileDialog.FileName = $"SyllabusOf_{dersin_kodu}_{now.ToString("dd MM yyyy_HH mm ss")}_{duzenleyenKisi_editorName}_ENG.json";
 
                 // Kullanıcıdan dosya yolu seçmesini iste
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Seçilen dosyanın yolu
                     string dosyaYolu = saveFileDialog.FileName;
+
+                    string folderPath = Path.Combine(Path.GetDirectoryName(dosyaYolu), dersin_kodu);
+
+                    // Create the folder if it doesn't exist
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    // Append the file name to the folder path
+                    string fullFilePath = Path.Combine(folderPath, Path.GetFileName(dosyaYolu));
 
                     // JSON verilerini temsil eden bir nesne oluştur
                     MufreDAT kisi = new MufreDAT
@@ -593,13 +611,11 @@ namespace SE302MufreDATA
 
                     };
 
-
-
                     // Nesneyi JSON formatına dönüştür
                     string json = JsonConvert.SerializeObject(kisi);
 
                     // JSON'u dosyaya kaydet
-                    System.IO.File.WriteAllText(dosyaYolu, json);
+                    System.IO.File.WriteAllText(fullFilePath, json);
 
                     MessageBox.Show("JSON File Save Succesful");
                 }
@@ -609,8 +625,9 @@ namespace SE302MufreDATA
             {
                 MessageBox.Show("Error Occured: " + ex.Message);
             }
-        } // JSON Kaydetme ENG
+        } 
 
+        // JSON Açma
         private void btnAc_Click(object sender, EventArgs e)
         {
             try
@@ -729,8 +746,9 @@ namespace SE302MufreDATA
                 MessageBox.Show("Hata oluştu: " + ex.Message);
 
             }
-        } // JSON Açma 
+        } 
 
+        // FARK KARŞILAŞTIRMA
         private void comparerbtn_Click(object sender, EventArgs e)
         {
             string file1Content = SelectFileAndReadContent("İlk JSON Dosyasını Seçiniz");
@@ -867,8 +885,9 @@ namespace SE302MufreDATA
                 // Default behavior
                 return originalPath;
             }
-        } // FARK KARŞILAŞTIRMA
+        }
 
+        // ENG-TR
         private void engButton_Click(object sender, EventArgs e)
         {
             
@@ -881,21 +900,28 @@ namespace SE302MufreDATA
             btnKaydet.Visible = false;
             btnKaydetENG.Visible = true;
             btnAc.Text = "OPEN";
+            comparerbtn.Text = "COMPARE";
             tabPage1.Text = "General Information";
             tabPage6.Text = "General Information-2";
             tabPage2.Text = "Assessments";
             tabPage3.Text = "Weekly Subjects";
             tabPage5.Text = "ECTS / Workload Table";
             label6.Text = "Course Name";
+            label6.Location = new System.Drawing.Point(215, 117);
             label7.Text = "Code";
             label8.Text = "Fall";
             label9.Text = "Spring";
+            label9.Location = new System.Drawing.Point(210, 166);
             label10.Text = "Theory";
+            label10.Location = new System.Drawing.Point(295, 166);
             label16.Text = "Application/Lab";
+            label16.Location = new System.Drawing.Point(382, 166);
             label11.Text = "Local Credits";
+            label11.Location = new System.Drawing.Point(524, 166);
             label13.Text = "ECTS";
             label14.Text = "Prerequisites";
             label15.Text = "Course Language";
+            label15.Location = new System.Drawing.Point(110, 288);
             ingilizce_radiobutton.Text = "English";
             turkce_radiobutton.Text = "Turkish";
             ikinciyabancidil_radiobutton.Text = "Second Foreign Language";
@@ -903,28 +929,42 @@ namespace SE302MufreDATA
             zorunlu_radiobutton.Text = "Required";
             secmeli_radiobutton.Text = "Elective";
             label17.Text = "Course Level";
+            label17.Location = new System.Drawing.Point(138, 377);
             onlisans_radiobutton.Text = "Short Cycle";
             lisans_radiobutton.Text = "First Cycle";
             yukseklisans_radiobutton.Text = "Second Cycle";
             doktora_radiobutton.Text = "Third Cycle";
             label18.Text = "Mode of Delivery";
+            label18.Location = new System.Drawing.Point(112, 426);
             yuzyuze_radiobutton.Text = "Face-to-Face";
             cevrimici_radiobutton.Text = "Online";
             karma_radiobutton.Text = "Blended";
             label19.Text = "Teaching Methods";
+            label19.Location = new System.Drawing.Point(101, 488);
             label3.Text = "and Techniques";
+            label3.Location = new System.Drawing.Point(119, 512);
             label12.Text = "Course Coordinator";
+            label12.Location = new System.Drawing.Point(90, 562);
             label20.Text = "Course Lecturer(s)";
+            label20.Location = new System.Drawing.Point(93, 616);
             label21.Text = "Assistan(s)";
+            label21.Location = new System.Drawing.Point(150, 676);
             label22.Text = "Course Objectives\t";
+            label22.Location = new System.Drawing.Point(65, 43);
             label23.Text = "Learning Outcomes";
+            label23.Location = new System.Drawing.Point(60, 157);
             label24.Text = "Course Derscription";
+            label24.Location = new System.Drawing.Point(55, 292);
             label25.Text = "Course Category";
             radioButton1.Text = "Core Course";
             radioButton2.Text = "Major Area Course";
             radioButton3.Text = "Supportive Course";
             radioButton4.Text = "Communication and Management Skills Course\t";
             radioButton5.Text = "Transferable Skill Course";
+            label26.Text = "Course Notes/Textbooks\r\n";
+            label26.Location = new System.Drawing.Point(27, 474);
+            label27.Text = "Suggested Materials";
+            label27.Location = new System.Drawing.Point(50, 573);
             Hafta.HeaderText = "Week";
             Konular.HeaderText = "Subjects";
             On_hazirlik.HeaderText = "Required Materials";
@@ -939,6 +979,9 @@ namespace SE302MufreDATA
             label4.Text = "Date :";
             Hafta.HeaderText = "Week";
             yeterlilik.HeaderText = "Program Competencies / Outcomes\t";
+            tabPage4.Text = "Course Learning Outcome";
+            tabPage7.Text = "Personal Notes";
+            label28.Text = "My Personal Notes\r\n";
             //WeeklyEnglish
             Tables.UpdateCellValue(dataGridView2, 14, 1, "Semester Review");
             Tables.UpdateCellValue(dataGridView2, 15, 1, "Exam");
@@ -983,21 +1026,28 @@ namespace SE302MufreDATA
             btnKaydet.Visible = true;
             btnKaydetENG.Visible = false;
             btnAc.Text = "AÇ";
+            comparerbtn.Text = "KARŞILAŞTIR";
             tabPage1.Text = "Genel Bilgiler";
             tabPage6.Text = "Genel Bilgiler-2";
             tabPage2.Text = "Değerlendirme Ölçütleri";
             tabPage3.Text = "Haftalık Konular";
             tabPage5.Text = "AKTS / İş Yükü Tablosu";
             label6.Text = "Dersin Adı";
+            label6.Location = new System.Drawing.Point(239, 117);
             label7.Text = "Kodu";
             label8.Text = "Güz";
             label9.Text = "Bahar";
+            label9.Location = new System.Drawing.Point(215, 166);
             label10.Text = "Teori";
+            label10.Location = new System.Drawing.Point(303, 166);
             label16.Text = "Uygulama/Lab";
+            label16.Location = new System.Drawing.Point(389, 166);
             label11.Text = "Yerel Kredi";
+            label11.Location = new System.Drawing.Point(531, 166);
             label13.Text = "AKTS";
             label14.Text = "Ön Koşul(lar)";
             label15.Text = "Dersin Dili";
+            label15.Location = new System.Drawing.Point(155, 288);
             ingilizce_radiobutton.Text = "İngilizce";
             turkce_radiobutton.Text = "Türkçe";
             ikinciyabancidil_radiobutton.Text = "İkinci Yabancı Dil";
@@ -1005,28 +1055,42 @@ namespace SE302MufreDATA
             zorunlu_radiobutton.Text = "Zorunlu";
             secmeli_radiobutton.Text = "Seçmeli";
             label17.Text = "Dersin Düzeyi";
+            label17.Location = new System.Drawing.Point(132, 377);
             onlisans_radiobutton.Text = "Ön Lisans";
             lisans_radiobutton.Text = "Lisans";
             yukseklisans_radiobutton.Text = "Yüksek Lisans";
             doktora_radiobutton.Text = "Doktora";
             label18.Text = "Dersin Veriliş Şekli";
+            label18.Location = new System.Drawing.Point(99, 426);
             yuzyuze_radiobutton.Text = "Yüz Yüze";
             cevrimici_radiobutton.Text = "Çevrim içi";
             karma_radiobutton.Text = "Karma";
             label19.Text = "Dersin Öğretim";
+            label19.Location = new System.Drawing.Point(101, 488);
             label3.Text = "Yöntem ve Teknikleri";
+            label3.Location = new System.Drawing.Point(79, 512);
             label12.Text = "Dersin Koordinatörü";
+            label12.Location = new System.Drawing.Point(87, 562);
             label20.Text = "Öğretim Eleman(lar)ı";
+            label20.Location = new System.Drawing.Point(85, 616);
             label21.Text = "Yardımcı(lar)ı";
+            label21.Location = new System.Drawing.Point(138, 676);
             label22.Text = "Dersin Amacı\t";
+            label22.Location = new System.Drawing.Point(96, 43);
             label23.Text = "Öğrenme Çıktıları";
+            label23.Location = new System.Drawing.Point(69, 157);
             label24.Text = "Ders Tanımı";
+            label24.Location = new System.Drawing.Point(103, 292);
             label25.Text = "Ders Kategorisi";
             radioButton1.Text = "Temel Ders";
             radioButton2.Text = "Uzmanlık/Alan Dersleri";
             radioButton3.Text = "Destek Dersleri";
             radioButton4.Text = "İletişim ve Yönetim Becerileri Dersleri\t";
             radioButton5.Text = "Aktarılabilir Beceri Dersleri";
+            label26.Text = "Ders Kitabı";
+            label26.Location = new System.Drawing.Point(110, 474);
+            label27.Text = "Önerilen Materyaller";
+            label27.Location = new System.Drawing.Point(45, 573);
             Hafta.HeaderText = "Hafta";
             Konular.HeaderText = "Konular";
             On_hazirlik.HeaderText = "Ön Hazırlık";
@@ -1041,6 +1105,9 @@ namespace SE302MufreDATA
             label4.Text = "Tarih :";
             Hafta.HeaderText = "Hafta";
             yeterlilik.HeaderText = "Program Yeterlilikleri / Çıktıları\t";
+            tabPage4.Text = "Dersin Öğrenme Çıktıları";
+            tabPage7.Text = "Kişisel Notlar";
+            label28.Text = "Kişisel Notlarım\r\n";
             //HaftalıkTürkçe
             Tables.UpdateCellValue(dataGridView2, 14, 1, "Dersin Gözden Geçirilmesi");
             Tables.UpdateCellValue(dataGridView2, 15, 1, "Fina Sınavı");
@@ -1073,6 +1140,6 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
             Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
-        } // ENG-TR
+        }
     }
 }
