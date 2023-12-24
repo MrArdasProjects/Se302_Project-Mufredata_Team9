@@ -27,8 +27,8 @@ namespace SE302MufreDATA
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Width = 1400;   // Formun genişliğini 1200 piksel olarak ayarlar
-            this.Height = 1200;  // Formun yüksekliğini 100*0 piksel olarak ayarlar
+            this.Width = 920;   // Formun genişliğini 1200 piksel olarak ayarlar
+            this.Height = 970;  // Formun yüksekliğini 100*0 piksel olarak ayarlar
 
             Tables.DataGridSettings2(dataGridView2); 
             Tables.DataGridSettings3(dataGridView3);
@@ -37,7 +37,9 @@ namespace SE302MufreDATA
 
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit; // DataGridView1_CellEndEdit metodu
             dataGridView3.CellEndEdit += DataGridView3_CellEndEdit; // DataGridView3_CellEndEdit metodu
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // This makes the form non-resizable
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
         private void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
