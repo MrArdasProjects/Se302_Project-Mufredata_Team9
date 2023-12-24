@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE302MufreDATA", "SE302MufreDATA\SE302MufreDATA.csproj", "{68795E3B-43F3-4B31-B114-1A9F2A32A2ED}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MufreDATA", "MufreDATA\MufreDATA.vdproj", "{88CB2623-B9D0-4C2A-93E2-16EC79D4599F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{68795E3B-43F3-4B31-B114-1A9F2A32A2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68795E3B-43F3-4B31-B114-1A9F2A32A2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68795E3B-43F3-4B31-B114-1A9F2A32A2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CB2623-B9D0-4C2A-93E2-16EC79D4599F}.Debug|Any CPU.ActiveCfg = Debug
+		{88CB2623-B9D0-4C2A-93E2-16EC79D4599F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

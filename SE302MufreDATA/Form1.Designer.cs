@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -75,7 +76,6 @@
             this.louc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lo4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.comparerbtn = new System.Windows.Forms.Button();
             this.yardimci_textbox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
@@ -151,6 +151,7 @@
             this.engButton = new System.Windows.Forms.Button();
             this.trButton = new System.Windows.Forms.Button();
             this.btnAc = new System.Windows.Forms.Button();
+            this.comparerbtn = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -228,9 +229,9 @@
             this.tabPage6.Controls.Add(this.pictureBox20);
             this.tabPage6.Controls.Add(this.pictureBox19);
             this.tabPage6.Location = new System.Drawing.Point(4, 36);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage6.Size = new System.Drawing.Size(876, 868);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Genel Bilgiler-2";
@@ -239,7 +240,7 @@
             // materyal_textbox
             // 
             this.materyal_textbox.Location = new System.Drawing.Point(212, 558);
-            this.materyal_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materyal_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.materyal_textbox.Multiline = true;
             this.materyal_textbox.Name = "materyal_textbox";
             this.materyal_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -262,7 +263,7 @@
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.Silver;
             this.pictureBox24.Location = new System.Drawing.Point(24, 558);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(183, 73);
             this.pictureBox24.TabIndex = 15;
@@ -271,7 +272,7 @@
             // derskitabi_textbox
             // 
             this.derskitabi_textbox.Location = new System.Drawing.Point(212, 451);
-            this.derskitabi_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.derskitabi_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.derskitabi_textbox.Multiline = true;
             this.derskitabi_textbox.Name = "derskitabi_textbox";
             this.derskitabi_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -294,7 +295,7 @@
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Silver;
             this.pictureBox23.Location = new System.Drawing.Point(24, 451);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(183, 73);
             this.pictureBox23.TabIndex = 12;
@@ -308,9 +309,9 @@
             this.groupBox5.Controls.Add(this.radioButton2);
             this.groupBox5.Controls.Add(this.radioButton1);
             this.groupBox5.Location = new System.Drawing.Point(211, 347);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(523, 79);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
@@ -319,7 +320,7 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(365, 16);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(146, 17);
             this.radioButton5.TabIndex = 4;
@@ -331,7 +332,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(166, 42);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(196, 17);
             this.radioButton4.TabIndex = 3;
@@ -343,7 +344,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(166, 16);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(97, 17);
             this.radioButton3.TabIndex = 2;
@@ -355,7 +356,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(15, 42);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(132, 17);
             this.radioButton2.TabIndex = 1;
@@ -367,7 +368,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(15, 16);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(79, 17);
             this.radioButton1.TabIndex = 0;
@@ -378,7 +379,7 @@
             // derstanimi_textbox
             // 
             this.derstanimi_textbox.Location = new System.Drawing.Point(211, 266);
-            this.derstanimi_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.derstanimi_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.derstanimi_textbox.Multiline = true;
             this.derstanimi_textbox.Name = "derstanimi_textbox";
             this.derstanimi_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -388,7 +389,7 @@
             // ogrenmecikti_textbox
             // 
             this.ogrenmecikti_textbox.Location = new System.Drawing.Point(211, 109);
-            this.ogrenmecikti_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ogrenmecikti_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.ogrenmecikti_textbox.Multiline = true;
             this.ogrenmecikti_textbox.Name = "ogrenmecikti_textbox";
             this.ogrenmecikti_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -398,7 +399,7 @@
             // dersinamaci_textbox
             // 
             this.dersinamaci_textbox.Location = new System.Drawing.Point(211, 23);
-            this.dersinamaci_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dersinamaci_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.dersinamaci_textbox.Multiline = true;
             this.dersinamaci_textbox.Name = "dersinamaci_textbox";
             this.dersinamaci_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -421,7 +422,7 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Silver;
             this.pictureBox22.Location = new System.Drawing.Point(24, 353);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(183, 73);
             this.pictureBox22.TabIndex = 6;
@@ -467,7 +468,7 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Silver;
             this.pictureBox21.Location = new System.Drawing.Point(24, 266);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(183, 73);
             this.pictureBox21.TabIndex = 2;
@@ -477,7 +478,7 @@
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Silver;
             this.pictureBox20.Location = new System.Drawing.Point(24, 109);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(183, 142);
             this.pictureBox20.TabIndex = 1;
@@ -487,7 +488,7 @@
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.Silver;
             this.pictureBox19.Location = new System.Drawing.Point(24, 23);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(183, 73);
             this.pictureBox19.TabIndex = 0;
@@ -497,9 +498,9 @@
             // 
             this.tabPage5.Controls.Add(this.dataGridView3);
             this.tabPage5.Location = new System.Drawing.Point(4, 36);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage5.Size = new System.Drawing.Size(876, 868);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "AKTS / İş Yükü Tablosu";
@@ -516,7 +517,7 @@
             this.sure,
             this.is_yuku});
             this.dataGridView3.Location = new System.Drawing.Point(-3, 0);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 28;
@@ -555,9 +556,9 @@
             // 
             this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 36);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(876, 868);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Haftalık Konular";
@@ -573,7 +574,7 @@
             this.Konular,
             this.On_hazirlik});
             this.dataGridView2.Location = new System.Drawing.Point(23, 25);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -605,9 +606,9 @@
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 36);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(876, 868);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Değerlendirme Ölçütleri";
@@ -628,7 +629,7 @@
             this.lo4});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -750,29 +751,18 @@
             this.tabPage1.Controls.Add(this.btnAc);
             this.tabPage1.Controls.Add(this.comparerbtn);
             this.tabPage1.Location = new System.Drawing.Point(4, 36);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(876, 868);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Genel Bilgiler";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // comparerbtn
-            // 
-            this.comparerbtn.Location = new System.Drawing.Point(280, 769);
-            this.comparerbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comparerbtn.Name = "comparerbtn";
-            this.comparerbtn.Size = new System.Drawing.Size(126, 51);
-            this.comparerbtn.TabIndex = 143;
-            this.comparerbtn.Text = "KARŞILAŞTIR";
-            this.comparerbtn.UseVisualStyleBackColor = true;
-            this.comparerbtn.Click += new System.EventHandler(this.comparerbtn_Click);
-            // 
             // yardimci_textbox
             // 
             this.yardimci_textbox.Location = new System.Drawing.Point(252, 666);
-            this.yardimci_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yardimci_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.yardimci_textbox.Multiline = true;
             this.yardimci_textbox.Name = "yardimci_textbox";
             this.yardimci_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -797,7 +787,7 @@
             this.pictureBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox18.BackColor = System.Drawing.Color.Silver;
             this.pictureBox18.Location = new System.Drawing.Point(30, 668);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(213, 32);
             this.pictureBox18.TabIndex = 140;
@@ -821,7 +811,7 @@
             this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox17.BackColor = System.Drawing.Color.Silver;
             this.pictureBox17.Location = new System.Drawing.Point(30, 610);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(213, 31);
             this.pictureBox17.TabIndex = 138;
@@ -830,7 +820,7 @@
             // ogrtmeleman_textbox
             // 
             this.ogrtmeleman_textbox.Location = new System.Drawing.Point(250, 608);
-            this.ogrtmeleman_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ogrtmeleman_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.ogrtmeleman_textbox.Multiline = true;
             this.ogrtmeleman_textbox.Name = "ogrtmeleman_textbox";
             this.ogrtmeleman_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -840,7 +830,7 @@
             // koordinator_textbox
             // 
             this.koordinator_textbox.Location = new System.Drawing.Point(252, 554);
-            this.koordinator_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.koordinator_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.koordinator_textbox.Multiline = true;
             this.koordinator_textbox.Name = "koordinator_textbox";
             this.koordinator_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -865,7 +855,7 @@
             this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox16.BackColor = System.Drawing.Color.Silver;
             this.pictureBox16.Location = new System.Drawing.Point(30, 554);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(213, 34);
             this.pictureBox16.TabIndex = 134;
@@ -889,7 +879,7 @@
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BackColor = System.Drawing.Color.Silver;
             this.pictureBox8.Location = new System.Drawing.Point(519, 152);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(107, 49);
             this.pictureBox8.TabIndex = 132;
@@ -913,7 +903,7 @@
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackColor = System.Drawing.Color.Silver;
             this.pictureBox7.Location = new System.Drawing.Point(371, 152);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(136, 49);
             this.pictureBox7.TabIndex = 130;
@@ -923,7 +913,7 @@
             // 
             this.duzenlenme_tarih_textbox.Enabled = false;
             this.duzenlenme_tarih_textbox.Location = new System.Drawing.Point(616, 12);
-            this.duzenlenme_tarih_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.duzenlenme_tarih_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.duzenlenme_tarih_textbox.Multiline = true;
             this.duzenlenme_tarih_textbox.Name = "duzenlenme_tarih_textbox";
             this.duzenlenme_tarih_textbox.Size = new System.Drawing.Size(111, 36);
@@ -934,7 +924,7 @@
             this.duzenleyen_kisi_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.duzenleyen_kisi_textbox.Location = new System.Drawing.Point(157, 12);
-            this.duzenleyen_kisi_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.duzenleyen_kisi_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.duzenleyen_kisi_textbox.Multiline = true;
             this.duzenleyen_kisi_textbox.Name = "duzenleyen_kisi_textbox";
             this.duzenleyen_kisi_textbox.Size = new System.Drawing.Size(230, 36);
@@ -945,7 +935,7 @@
             // 
             this.teknik_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.teknik_textbox.Location = new System.Drawing.Point(254, 480);
-            this.teknik_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teknik_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.teknik_textbox.Multiline = true;
             this.teknik_textbox.Name = "teknik_textbox";
             this.teknik_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -956,7 +946,7 @@
             // 
             this.kosul_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.kosul_textbox.Location = new System.Drawing.Point(252, 242);
-            this.kosul_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kosul_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.kosul_textbox.Multiline = true;
             this.kosul_textbox.Name = "kosul_textbox";
             this.kosul_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -967,7 +957,7 @@
             // 
             this.akts_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.akts_textbox.Location = new System.Drawing.Point(644, 206);
-            this.akts_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.akts_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.akts_textbox.Multiline = true;
             this.akts_textbox.Name = "akts_textbox";
             this.akts_textbox.Size = new System.Drawing.Size(83, 28);
@@ -977,7 +967,7 @@
             // 
             this.kredi_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.kredi_textbox.Location = new System.Drawing.Point(517, 206);
-            this.kredi_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kredi_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.kredi_textbox.Multiline = true;
             this.kredi_textbox.Name = "kredi_textbox";
             this.kredi_textbox.Size = new System.Drawing.Size(108, 28);
@@ -987,7 +977,7 @@
             // 
             this.uyglab_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.uyglab_textbox.Location = new System.Drawing.Point(371, 205);
-            this.uyglab_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uyglab_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.uyglab_textbox.Multiline = true;
             this.uyglab_textbox.Name = "uyglab_textbox";
             this.uyglab_textbox.Size = new System.Drawing.Size(136, 28);
@@ -997,7 +987,7 @@
             // 
             this.teori_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.teori_textbox.Location = new System.Drawing.Point(289, 205);
-            this.teori_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teori_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.teori_textbox.Multiline = true;
             this.teori_textbox.Name = "teori_textbox";
             this.teori_textbox.Size = new System.Drawing.Size(69, 28);
@@ -1007,7 +997,7 @@
             // 
             this.bahar_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bahar_textbox.Location = new System.Drawing.Point(195, 205);
-            this.bahar_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bahar_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.bahar_textbox.Multiline = true;
             this.bahar_textbox.Name = "bahar_textbox";
             this.bahar_textbox.Size = new System.Drawing.Size(83, 28);
@@ -1017,7 +1007,7 @@
             // 
             this.guz_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.guz_textbox.Location = new System.Drawing.Point(115, 205);
-            this.guz_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guz_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.guz_textbox.Multiline = true;
             this.guz_textbox.Name = "guz_textbox";
             this.guz_textbox.Size = new System.Drawing.Size(68, 28);
@@ -1027,7 +1017,7 @@
             // 
             this.kod_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.kod_textbox.Location = new System.Drawing.Point(33, 205);
-            this.kod_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kod_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.kod_textbox.Multiline = true;
             this.kod_textbox.Name = "kod_textbox";
             this.kod_textbox.Size = new System.Drawing.Size(66, 28);
@@ -1038,7 +1028,7 @@
             this.dersinadi_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dersinadi_textbox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dersinadi_textbox.Location = new System.Drawing.Point(327, 110);
-            this.dersinadi_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dersinadi_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.dersinadi_textbox.Multiline = true;
             this.dersinadi_textbox.Name = "dersinadi_textbox";
             this.dersinadi_textbox.Size = new System.Drawing.Size(399, 34);
@@ -1104,7 +1094,7 @@
             this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.BackColor = System.Drawing.Color.Silver;
             this.pictureBox15.Location = new System.Drawing.Point(31, 480);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(213, 55);
             this.pictureBox15.TabIndex = 116;
@@ -1128,7 +1118,7 @@
             this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.BackColor = System.Drawing.Color.Silver;
             this.pictureBox14.Location = new System.Drawing.Point(31, 418);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(213, 32);
             this.pictureBox14.TabIndex = 114;
@@ -1143,7 +1133,7 @@
             this.label17.Location = new System.Drawing.Point(132, 377);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(107, 16);
+            this.label17.Size = new System.Drawing.Size(103, 16);
             this.label17.TabIndex = 113;
             this.label17.Text = "Dersin Düzeyi";
             // 
@@ -1152,7 +1142,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.Silver;
             this.pictureBox6.Location = new System.Drawing.Point(30, 370);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(215, 29);
             this.pictureBox6.TabIndex = 112;
@@ -1162,7 +1152,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Silver;
             this.pictureBox5.Location = new System.Drawing.Point(31, 321);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(213, 39);
             this.pictureBox5.TabIndex = 110;
@@ -1174,9 +1164,9 @@
             this.groupBox2.Controls.Add(this.secmeli_radiobutton);
             this.groupBox2.Controls.Add(this.zorunlu_radiobutton);
             this.groupBox2.Location = new System.Drawing.Point(250, 321);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(479, 36);
             this.groupBox2.TabIndex = 119;
             this.groupBox2.TabStop = false;
@@ -1185,7 +1175,7 @@
             // 
             this.secmeli_radiobutton.AutoSize = true;
             this.secmeli_radiobutton.Location = new System.Drawing.Point(109, 14);
-            this.secmeli_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.secmeli_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.secmeli_radiobutton.Name = "secmeli_radiobutton";
             this.secmeli_radiobutton.Size = new System.Drawing.Size(62, 17);
             this.secmeli_radiobutton.TabIndex = 57;
@@ -1197,7 +1187,7 @@
             // 
             this.zorunlu_radiobutton.AutoSize = true;
             this.zorunlu_radiobutton.Location = new System.Drawing.Point(13, 14);
-            this.zorunlu_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.zorunlu_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.zorunlu_radiobutton.Name = "zorunlu_radiobutton";
             this.zorunlu_radiobutton.Size = new System.Drawing.Size(61, 17);
             this.zorunlu_radiobutton.TabIndex = 56;
@@ -1212,9 +1202,9 @@
             this.groupBox1.Controls.Add(this.turkce_radiobutton);
             this.groupBox1.Controls.Add(this.ingilizce_radiobutton);
             this.groupBox1.Location = new System.Drawing.Point(252, 274);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(477, 36);
             this.groupBox1.TabIndex = 118;
             this.groupBox1.TabStop = false;
@@ -1223,7 +1213,7 @@
             // 
             this.ikinciyabancidil_radiobutton.AutoSize = true;
             this.ikinciyabancidil_radiobutton.Location = new System.Drawing.Point(185, 14);
-            this.ikinciyabancidil_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ikinciyabancidil_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.ikinciyabancidil_radiobutton.Name = "ikinciyabancidil_radiobutton";
             this.ikinciyabancidil_radiobutton.Size = new System.Drawing.Size(107, 17);
             this.ikinciyabancidil_radiobutton.TabIndex = 58;
@@ -1235,7 +1225,7 @@
             // 
             this.turkce_radiobutton.AutoSize = true;
             this.turkce_radiobutton.Location = new System.Drawing.Point(109, 14);
-            this.turkce_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.turkce_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.turkce_radiobutton.Name = "turkce_radiobutton";
             this.turkce_radiobutton.Size = new System.Drawing.Size(59, 17);
             this.turkce_radiobutton.TabIndex = 57;
@@ -1247,7 +1237,7 @@
             // 
             this.ingilizce_radiobutton.AutoSize = true;
             this.ingilizce_radiobutton.Location = new System.Drawing.Point(13, 14);
-            this.ingilizce_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ingilizce_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.ingilizce_radiobutton.Name = "ingilizce_radiobutton";
             this.ingilizce_radiobutton.Size = new System.Drawing.Size(63, 17);
             this.ingilizce_radiobutton.TabIndex = 56;
@@ -1262,9 +1252,9 @@
             this.groupBox3.Controls.Add(this.cevrimici_radiobutton);
             this.groupBox3.Controls.Add(this.yuzyuze_radiobutton);
             this.groupBox3.Location = new System.Drawing.Point(252, 414);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(477, 36);
             this.groupBox3.TabIndex = 121;
             this.groupBox3.TabStop = false;
@@ -1273,7 +1263,7 @@
             // 
             this.karma_radiobutton.AutoSize = true;
             this.karma_radiobutton.Location = new System.Drawing.Point(185, 14);
-            this.karma_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.karma_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.karma_radiobutton.Name = "karma_radiobutton";
             this.karma_radiobutton.Size = new System.Drawing.Size(55, 17);
             this.karma_radiobutton.TabIndex = 58;
@@ -1285,7 +1275,7 @@
             // 
             this.cevrimici_radiobutton.AutoSize = true;
             this.cevrimici_radiobutton.Location = new System.Drawing.Point(109, 14);
-            this.cevrimici_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cevrimici_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.cevrimici_radiobutton.Name = "cevrimici_radiobutton";
             this.cevrimici_radiobutton.Size = new System.Drawing.Size(70, 17);
             this.cevrimici_radiobutton.TabIndex = 57;
@@ -1297,7 +1287,7 @@
             // 
             this.yuzyuze_radiobutton.AutoSize = true;
             this.yuzyuze_radiobutton.Location = new System.Drawing.Point(13, 14);
-            this.yuzyuze_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yuzyuze_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.yuzyuze_radiobutton.Name = "yuzyuze_radiobutton";
             this.yuzyuze_radiobutton.Size = new System.Drawing.Size(70, 17);
             this.yuzyuze_radiobutton.TabIndex = 56;
@@ -1313,9 +1303,9 @@
             this.groupBox4.Controls.Add(this.lisans_radiobutton);
             this.groupBox4.Controls.Add(this.onlisans_radiobutton);
             this.groupBox4.Location = new System.Drawing.Point(252, 363);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(477, 36);
             this.groupBox4.TabIndex = 120;
             this.groupBox4.TabStop = false;
@@ -1324,7 +1314,7 @@
             // 
             this.doktora_radiobutton.AutoSize = true;
             this.doktora_radiobutton.Location = new System.Drawing.Point(297, 14);
-            this.doktora_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.doktora_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.doktora_radiobutton.Name = "doktora_radiobutton";
             this.doktora_radiobutton.Size = new System.Drawing.Size(63, 17);
             this.doktora_radiobutton.TabIndex = 59;
@@ -1336,7 +1326,7 @@
             // 
             this.yukseklisans_radiobutton.AutoSize = true;
             this.yukseklisans_radiobutton.Location = new System.Drawing.Point(185, 14);
-            this.yukseklisans_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yukseklisans_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.yukseklisans_radiobutton.Name = "yukseklisans_radiobutton";
             this.yukseklisans_radiobutton.Size = new System.Drawing.Size(94, 17);
             this.yukseklisans_radiobutton.TabIndex = 58;
@@ -1348,7 +1338,7 @@
             // 
             this.lisans_radiobutton.AutoSize = true;
             this.lisans_radiobutton.Location = new System.Drawing.Point(109, 14);
-            this.lisans_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lisans_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.lisans_radiobutton.Name = "lisans_radiobutton";
             this.lisans_radiobutton.Size = new System.Drawing.Size(55, 17);
             this.lisans_radiobutton.TabIndex = 57;
@@ -1360,7 +1350,7 @@
             // 
             this.onlisans_radiobutton.AutoSize = true;
             this.onlisans_radiobutton.Location = new System.Drawing.Point(13, 14);
-            this.onlisans_radiobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onlisans_radiobutton.Margin = new System.Windows.Forms.Padding(2);
             this.onlisans_radiobutton.Name = "onlisans_radiobutton";
             this.onlisans_radiobutton.Size = new System.Drawing.Size(72, 17);
             this.onlisans_radiobutton.TabIndex = 56;
@@ -1402,7 +1392,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Silver;
             this.pictureBox4.Location = new System.Drawing.Point(33, 278);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(212, 32);
             this.pictureBox4.TabIndex = 108;
@@ -1426,7 +1416,7 @@
             this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.BackColor = System.Drawing.Color.Silver;
             this.pictureBox13.Location = new System.Drawing.Point(31, 242);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(213, 32);
             this.pictureBox13.TabIndex = 105;
@@ -1450,7 +1440,7 @@
             this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.BackColor = System.Drawing.Color.Silver;
             this.pictureBox12.Location = new System.Drawing.Point(644, 153);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(82, 49);
             this.pictureBox12.TabIndex = 96;
@@ -1474,7 +1464,7 @@
             this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox11.BackColor = System.Drawing.Color.Silver;
             this.pictureBox11.Location = new System.Drawing.Point(289, 151);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(68, 49);
             this.pictureBox11.TabIndex = 92;
@@ -1498,7 +1488,7 @@
             this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.BackColor = System.Drawing.Color.Silver;
             this.pictureBox10.Location = new System.Drawing.Point(195, 151);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(81, 49);
             this.pictureBox10.TabIndex = 90;
@@ -1522,7 +1512,7 @@
             this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.BackColor = System.Drawing.Color.Silver;
             this.pictureBox9.Location = new System.Drawing.Point(115, 152);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(67, 49);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1547,7 +1537,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Silver;
             this.pictureBox3.Location = new System.Drawing.Point(33, 152);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 49);
             this.pictureBox3.TabIndex = 84;
@@ -1572,7 +1562,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Silver;
             this.pictureBox2.Location = new System.Drawing.Point(33, 110);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(288, 32);
             this.pictureBox2.TabIndex = 81;
@@ -1596,7 +1586,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
             this.pictureBox1.Location = new System.Drawing.Point(33, 72);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(693, 34);
             this.pictureBox1.TabIndex = 79;
@@ -1606,7 +1596,7 @@
             // 
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydet.Location = new System.Drawing.Point(19, 768);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(2);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(126, 51);
             this.btnKaydet.TabIndex = 78;
@@ -1618,7 +1608,7 @@
             // 
             this.btnKaydetENG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydetENG.Location = new System.Drawing.Point(19, 768);
-            this.btnKaydetENG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKaydetENG.Margin = new System.Windows.Forms.Padding(2);
             this.btnKaydetENG.Name = "btnKaydetENG";
             this.btnKaydetENG.Size = new System.Drawing.Size(126, 51);
             this.btnKaydetENG.TabIndex = 78;
@@ -1631,7 +1621,7 @@
             // 
             this.engButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.engButton.Location = new System.Drawing.Point(760, 20);
-            this.engButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.engButton.Margin = new System.Windows.Forms.Padding(2);
             this.engButton.Name = "engButton";
             this.engButton.Size = new System.Drawing.Size(47, 29);
             this.engButton.TabIndex = 144;
@@ -1645,7 +1635,7 @@
             this.trButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.trButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trButton.Location = new System.Drawing.Point(808, 20);
-            this.trButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trButton.Margin = new System.Windows.Forms.Padding(2);
             this.trButton.Name = "trButton";
             this.trButton.Size = new System.Drawing.Size(47, 29);
             this.trButton.TabIndex = 145;
@@ -1657,13 +1647,24 @@
             // 
             this.btnAc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAc.Location = new System.Drawing.Point(157, 769);
-            this.btnAc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAc.Margin = new System.Windows.Forms.Padding(2);
             this.btnAc.Name = "btnAc";
             this.btnAc.Size = new System.Drawing.Size(110, 50);
             this.btnAc.TabIndex = 77;
             this.btnAc.Text = "AÇ";
             this.btnAc.UseVisualStyleBackColor = true;
             this.btnAc.Click += new System.EventHandler(this.btnAc_Click);
+            // 
+            // comparerbtn
+            // 
+            this.comparerbtn.Location = new System.Drawing.Point(280, 769);
+            this.comparerbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.comparerbtn.Name = "comparerbtn";
+            this.comparerbtn.Size = new System.Drawing.Size(126, 51);
+            this.comparerbtn.TabIndex = 143;
+            this.comparerbtn.Text = "KARŞILAŞTIR";
+            this.comparerbtn.UseVisualStyleBackColor = true;
+            this.comparerbtn.Click += new System.EventHandler(this.comparerbtn_Click);
             // 
             // tabControl1
             // 
@@ -1675,7 +1676,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Location = new System.Drawing.Point(0, 8);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(12, 10);
             this.tabControl1.SelectedIndex = 0;
@@ -1686,7 +1687,7 @@
             // 
             this.tabPage4.Controls.Add(this.dataGridView4);
             this.tabPage4.Location = new System.Drawing.Point(4, 36);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(876, 868);
             this.tabPage4.TabIndex = 6;
@@ -1707,7 +1708,7 @@
             this.dort,
             this.bes});
             this.dataGridView4.Location = new System.Drawing.Point(23, 25);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 62;
             this.dataGridView4.RowTemplate.Height = 28;
@@ -1768,9 +1769,9 @@
             this.tabPage7.Controls.Add(this.label28);
             this.tabPage7.Controls.Add(this.kisisel_notlar_textbox);
             this.tabPage7.Location = new System.Drawing.Point(4, 36);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage7.Size = new System.Drawing.Size(876, 868);
             this.tabPage7.TabIndex = 7;
             this.tabPage7.Text = "Kişisel Notlar";
@@ -1789,7 +1790,7 @@
             // kisisel_notlar_textbox
             // 
             this.kisisel_notlar_textbox.Location = new System.Drawing.Point(183, 83);
-            this.kisisel_notlar_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kisisel_notlar_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.kisisel_notlar_textbox.Multiline = true;
             this.kisisel_notlar_textbox.Name = "kisisel_notlar_textbox";
             this.kisisel_notlar_textbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1802,9 +1803,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 690);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "MufreDAT";
+            this.Text = "MufreDATA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();

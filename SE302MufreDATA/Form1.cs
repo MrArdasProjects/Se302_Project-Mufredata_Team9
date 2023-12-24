@@ -1002,20 +1002,20 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 11, 0, "Final Exam");
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Total");
             //ECTS
-            Tables.UpdateCellValue(dataGridView1, 0, 0, "Teorik Ders Saati");
-            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratuvar / Uygulama Saati");
-            Tables.UpdateCellValue(dataGridView1, 2, 0, "Sınıf Dışı Ders Çalışması");
-            Tables.UpdateCellValue(dataGridView1, 3, 0, "Arazi Çalışması");
-            Tables.UpdateCellValue(dataGridView1, 4, 0, "Küçük Sınav / Stüdyo Kritiği");
-            Tables.UpdateCellValue(dataGridView1, 5, 0, "Ödev");
-            Tables.UpdateCellValue(dataGridView1, 6, 0, "Sunum / Juri Önünde Sunum");
-            Tables.UpdateCellValue(dataGridView1, 7, 0, "Proje");
-            Tables.UpdateCellValue(dataGridView1, 8, 0, "Portfolyo");
-            Tables.UpdateCellValue(dataGridView1, 9, 0, "Seminer / Çalıştay");
-            Tables.UpdateCellValue(dataGridView1, 10, 0, "Sözlü Sınav");
-            Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
-            Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
-            Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
+            Tables.UpdateCellValue(dataGridView3, 0, 0, "Course Hours");
+            Tables.UpdateCellValue(dataGridView3, 1, 0, "Laboratory / Application Hours");
+            Tables.UpdateCellValue(dataGridView3, 2, 0, "Study Hours out of Class");
+            Tables.UpdateCellValue(dataGridView3, 3, 0, "Field Work");
+            Tables.UpdateCellValue(dataGridView3, 4, 0, "Quiz / Studio Critique");
+            Tables.UpdateCellValue(dataGridView3, 5, 0, "Homework");
+            Tables.UpdateCellValue(dataGridView3, 6, 0, "Presentation / Jury");
+            Tables.UpdateCellValue(dataGridView3, 7, 0, "Project");
+            Tables.UpdateCellValue(dataGridView3, 8, 0, "Portfolio");
+            Tables.UpdateCellValue(dataGridView3, 9, 0, "Seminar / Workshop");
+            Tables.UpdateCellValue(dataGridView3, 10, 0, "Oral Exam");
+            Tables.UpdateCellValue(dataGridView3, 11, 0, "Midterm");
+            Tables.UpdateCellValue(dataGridView3, 12, 0, "Final Examı");
+            Tables.UpdateCellValue(dataGridView3, 13, 0, "Total");
         }
         private void trButton_Click(object sender, EventArgs e)
         {
@@ -1128,20 +1128,20 @@ namespace SE302MufreDATA
             Tables.UpdateCellValue(dataGridView1, 11, 0, "Final Sınavı");
             Tables.UpdateCellValue(dataGridView1, 12, 0, "Toplam");
             //AKTS
-            Tables.UpdateCellValue(dataGridView1, 0, 0, "Teorik Ders Saati");
-            Tables.UpdateCellValue(dataGridView1, 1, 0, "Laboratuvar / Uygulama Saati");
-            Tables.UpdateCellValue(dataGridView1, 2, 0, "Sınıf Dışı Ders Çalışması");
-            Tables.UpdateCellValue(dataGridView1, 3, 0, "Arazi Çalışması");
-            Tables.UpdateCellValue(dataGridView1, 4, 0, "Küçük Sınav / Stüdyo Kritiği");
-            Tables.UpdateCellValue(dataGridView1, 5, 0, "Ödev");
-            Tables.UpdateCellValue(dataGridView1, 6, 0, "Sunum / Juri Önünde Sunum");
-            Tables.UpdateCellValue(dataGridView1, 7, 0, "Proje");
-            Tables.UpdateCellValue(dataGridView1, 8, 0, "Portfolyo");
-            Tables.UpdateCellValue(dataGridView1, 9, 0, "Seminer / Çalıştay");
-            Tables.UpdateCellValue(dataGridView1, 10, 0, "Sözlü Sınav");
-            Tables.UpdateCellValue(dataGridView1, 11, 0, "Ara Sınav");
-            Tables.UpdateCellValue(dataGridView1, 12, 0, "Final Sınavı");
-            Tables.UpdateCellValue(dataGridView1, 13, 0, "Toplam");
+            Tables.UpdateCellValue(dataGridView3, 0, 0, "Teorik Ders Saati");
+            Tables.UpdateCellValue(dataGridView3, 1, 0, "Laboratuvar / Uygulama Saati");
+            Tables.UpdateCellValue(dataGridView3, 2, 0, "Sınıf Dışı Ders Çalışması");
+            Tables.UpdateCellValue(dataGridView3, 3, 0, "Arazi Çalışması");
+            Tables.UpdateCellValue(dataGridView3, 4, 0, "Küçük Sınav / Stüdyo Kritiği");
+            Tables.UpdateCellValue(dataGridView3, 5, 0, "Ödev");
+            Tables.UpdateCellValue(dataGridView3, 6, 0, "Sunum / Juri Önünde Sunum");
+            Tables.UpdateCellValue(dataGridView3, 7, 0, "Proje");
+            Tables.UpdateCellValue(dataGridView3, 8, 0, "Portfolyo");
+            Tables.UpdateCellValue(dataGridView3, 9, 0, "Seminer / Çalıştay");
+            Tables.UpdateCellValue(dataGridView3, 10, 0, "Sözlü Sınav");
+            Tables.UpdateCellValue(dataGridView3, 11, 0, "Ara Sınav");
+            Tables.UpdateCellValue(dataGridView3, 12, 0, "Final Sınavı");
+            Tables.UpdateCellValue(dataGridView3, 13, 0, "Toplam");
         }
     }
 }
