@@ -37,7 +37,7 @@ namespace SE302MufreDATA
 
             dataGridView1.CellEndEdit += DataGridView1_CellEndEdit; // DataGridView1_CellEndEdit metodu
             dataGridView3.CellEndEdit += DataGridView3_CellEndEdit; // DataGridView3_CellEndEdit metodu
-            this.FormBorderStyle = FormBorderStyle.FixedSingle; // This makes the form non-resizable
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
